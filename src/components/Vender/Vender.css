@@ -1,0 +1,11 @@
+
+   #vendercards{
+      display: block;
+   }
+@media screen and (max-width: 500px) {
+   #vendercards{
+      display: none;
+   }
+    
+
+  }

@@ -1,0 +1,10 @@
+#secondcomtainercard{
+    display: inline-block;
+    background-color:#FFD600;
+    width: 100%;
+}
+@media screen and (max-width: 500px){
+    #secondcomtainercard{
+      display: none;
+    }
+  }

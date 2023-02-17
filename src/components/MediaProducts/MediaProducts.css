@@ -1,0 +1,29 @@
+.connectbtn{
+background-color: #FDE31A;
+border-color: transparent;
+border-radius: 20px;
+font-size: 15px;
+margin-bottom: 10px;
+}
+.listbtn{
+  background-color: #FDE31A;
+  border-color: transparent;
+  border-radius: 20px;
+  font-size: 15px; 
+}
+.super_btnMedia{
+  background-color: #FDE31A;
+  border-color: transparent;
+  border-radius: 20px;
+  font-size: 15px; 
+}
+#headerMedia{
+  display: none;
+
+}
+@media screen and (max-width: 500px) {
+#headerMedia{
+  display: block;
+
+}
+}

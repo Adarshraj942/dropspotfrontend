@@ -1,0 +1,18 @@
+#mediabutton{
+display: none;
+}
+
+#catory{
+background: transparent;
+border-color: transparent;
+}
+@media screen and (max-width: 500px)
+{
+    #mediabutton{
+      display:inline;
+    }
+
+ 
+  
+ 
+  }

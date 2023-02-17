@@ -1,0 +1,99 @@
+
+
+
+.flexutemcenter{
+   
+        background-color:transparent;
+        font-weight:500;
+        font-size:15.15px;
+        line-height:19.33px;
+        color:rgba(0,0,1);
+        height:45px;
+       width:350px;
+        border-color:transparent;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+         
+       
+}
+.catogrybtns{
+ background-color:transparent;
+ font-weight:400;
+ font-size:15.15px;
+ line-height:19.33px;
+ color:rgba(0,0,1);
+ height:45px;
+width:300px;
+ border-color:transparent;
+   
+  }
+.sidenav {
+    height: 100%;
+    width: 300px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    overflow-x: hidden;
+    
+  }
+  
+
+  
+ 
+
+  
+.row{
+    display: flex;
+}
+#imagecol{
+    display: flex;
+}
+#section{
+    display: flex;
+}
+#delivery{
+    display: block;
+}
+#mediabutton{
+    display:none;
+}
+#MediaProduct{
+    display: none;
+}
+#slider{
+    display: none;
+}
+#ShippingCost{
+    display: inline;
+}
+
+@media screen and (max-width: 500px) {
+    .row{
+        display: none;
+    }
+    #imagecol{
+        display:none;
+    }
+    #delivery{
+        display: none;
+    }
+    #mediabutton{
+        display: inline;
+    }
+    #MediaProduct{
+        display: inline;
+    }
+    #slider{
+        display: none;
+    }
+    #ShippingCost{
+        display: inline;
+    }
+    #section{
+        display: none;
+    }
+  
+    
+
+  }

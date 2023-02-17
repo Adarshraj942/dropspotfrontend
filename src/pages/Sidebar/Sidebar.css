@@ -1,0 +1,11 @@
+.dropbtnsubmenu{
+    background-color:#FDE31A;
+    border-color: transparent;
+    font-weight: 400;
+    color: rgba(0,0,0,1);
+    font-size: 15px;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+}
+
