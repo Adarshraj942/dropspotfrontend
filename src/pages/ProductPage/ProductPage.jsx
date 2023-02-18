@@ -115,10 +115,10 @@ function ProductPage() {
              
               <div className='col'> <button style={inventerybtn}>Inventory</button> </div>
             </div>
-              <img src={post.image1?"http://ec2-35-77-227-175.ap-northeast-1.compute.amazonaws.com:5000/images/"+post.image1:""} style={{marginTop:"20px"}}/>
+              <img src={post.image1?"https://server.dropspot.in/images/"+post.image1:""} style={{marginTop:"20px"}}/>
               <span className="sub-img">
-                <img src={post.image2?"http://ec2-35-77-227-175.ap-northeast-1.compute.amazonaws.com:5000/images/"+post.image2:""} />
-                <img src={post.image3?"http://ec2-35-77-227-175.ap-northeast-1.compute.amazonaws.com:5000/images/"+post.image3:"" } />
+                <img src={post.image2?"https://server.dropspot.in/images/"+post.image2:""} />
+                <img src={post.image3?"https://server.dropspot.in/images/"+post.image3:"" } />
                
               </span>
               <div className="row ">

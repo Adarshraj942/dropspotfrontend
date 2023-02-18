@@ -167,7 +167,7 @@ const handleToggle=()=>{
                       </div>
                     </div>{" "}
                     <img
-                     src={ele.image1?"http://ec2-35-77-227-175.ap-northeast-1.compute.amazonaws.com:5000/images/"+ele.image1:"" }
+                     src={ele.image1?"https://server.dropspot.in/images/"+ele.image1:"" }
                      style={{cursor:"pointer",width:"170px",height:"170px" }}
                      onClick={() => {
                       history.push(`/ProductPage/${ele._id}`)

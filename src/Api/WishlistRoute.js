@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const API =axios.create({baseURL:"http://ec2-35-77-227-175.ap-northeast-1.compute.amazonaws.com:5000"})
+const API =axios.create({baseURL:"https://server.dropspot.in"})
 
 export const getWishlist=(data)=>API.post("/wishlist/get",data)
 
