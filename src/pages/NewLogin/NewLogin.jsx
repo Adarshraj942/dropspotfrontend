@@ -5,12 +5,16 @@ import smart from '../../assets/smart.png'
 import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar'
 import './NewLogin.css'
-
+import {LoginSocialFacebook} from "reactjs-social-login"
+import {FacebookLoginButton} from "react-social-login-buttons"
 import { login, signUp } from "../../Api/AuthRequest";
 import { useEffect } from "react";
 import { useHistory } from 'react-router-dom';
 
-import { useGoogleOneTapLogin } from "react-google-one-tap-login";
+//import { useGoogleOneTapLogin } from "react-google-one-tap-login";
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google';
+
 
 const NewLogin = () => {
   const userInfo = localStorage.getItem("userInfo");
@@ -25,17 +29,17 @@ const NewLogin = () => {
   const [error, setError] = useState(false);
   const [error2, setError2] = useState(false);
    //one tap google login
-   useGoogleOneTapLogin({
-    onSuccess: (response) => {
-      localStorage.setItem("userInfo", response);
-      history.push("/");
-    },
-    onError: (error) => console.log(error),
-    googleAccountConfigs: {
-      client_id:
-        "820965083830-suli7t5b5bul27109gngq9i9ks8fsv9e.apps.googleusercontent.com",
-    },
-  });
+  //  useGoogleOneTapLogin({
+  //   onSuccess: (response) => {
+  //     localStorage.setItem("userInfo", response);
+  //     history.push("/");
+  //   },
+  //   onError: (error) => console.log(error),
+  //   googleAccountConfigs: {
+  //     client_id:
+  //       "820965083830-suli7t5b5bul27109gngq9i9ks8fsv9e.apps.googleusercontent.com",
+  //   },
+  // });
 
   const handleChange = (e) => {
     setData({ ...user, [e.target.name]: e.target.value });
@@ -129,8 +133,40 @@ const NewLogin = () => {
                                 <div className="line-separator" />
                             </div>
                             <div  className="flex-container">
-                                <div  className="flex-left"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}><img align="center" src={googleicon} alt="" /></button></div>
-                                <div  className="flex-right"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}><img  align="center" src={facebookicon} alt="" /></button></div>
+                                {/* <div  className="flex-left"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}><img align="center" src={googleicon} alt="" /></button></div> */}
+                                {/* <div  className="flex-right"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}><img  align="center" src={facebookicon} alt="" /></button></div> */}
+                                <GoogleOAuthProvider clientId="820965083830-suli7t5b5bul27109gngq9i9ks8fsv9e.apps.googleusercontent.com">
+                                  
+                                    <GoogleLogin 
+                                      onSuccess={credentialResponse => {
+                                        console.log(credentialResponse);
+                                        if(credentialResponse){
+                                          history.push("/")
+                                        }
+                                      }}
+                                      onError={() => {
+                                        console.log('Login Failed');
+                                      }}
+                                    />
+                                  </GoogleOAuthProvider>
+                               <LoginSocialFacebook
+                               appId='716781016838370'
+                               onResolve={(response)=>{
+                                console.log(response)
+                                if(response){
+                                  history.push("/")
+                                }
+                               }}
+
+                               onReject={(error)=>{
+                                console.log(error);
+                               }}
+                               >
+
+
+                               <FacebookLoginButton  style={{height:"36px"}}/>
+                               </LoginSocialFacebook>
+                            
                             </div>
              </form> 
             </div>
