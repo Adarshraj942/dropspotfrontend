@@ -88,7 +88,7 @@ const coloumn=[
         <div className='col-10'>
          
           <div style={{ display: 'block', width:'auto',color:'black'}}>
-          <Tabs defaultActiveKey="third" className='col-10' style={{width:'1140px',color:'black'}}>
+          <Tabs defaultActiveKey="third" className='col-12' style={{width:'1140px',color:'black',backgroundColor:'rgba(255, 214, 0, 1)'}}>
             <Tab eventKey="first" title="Product Inventory" style={{width:'1140px',color:'black',textDecoration:'none'}} >
               <div className='row' style={{marginTop:'20px'}}>
                 <div className='col-6'>

@@ -39,9 +39,9 @@ const Product={
             <div className='row'>
                 <div className='col'>
                 <div>
-                <div style={{ display: 'block', width: 'auto', padding: 30 }}>
+                <div style={{ display: 'block', width: 'auto' }}>
                     
-                    <Tabs defaultActiveKey="first">
+                    <Tabs defaultActiveKey="first" style={{backgroundColor:'rgba(255, 214, 0, 1)'}}>
                         <Tab eventKey="first" title="Listed">
                         <div className='row' style={{marginTop:'20px'}}>
                             <div className='col'><select  style={{width:'350px',outline:'#FDE31A'}} name="AllStores" id="AllStores">

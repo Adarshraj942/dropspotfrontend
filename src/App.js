@@ -62,6 +62,8 @@ import OrderTracking from "./pages/OrdersTracking/OrderTracking";
 import PurchaseCart from "./pages/PurchaseCart/PurchaseCart";
 import SkuList from "./pages/SkuList/SkuList";
 import ServiceProduct from "./pages/ServiceProduct/ServiceProduct";
+import NewSignup from "./pages/NewSignup/NewSignup";
+import NewLogin from './pages/NewLogin/NewLogin'
 
 
 function App() {
@@ -81,9 +83,12 @@ function App() {
         <Route path="/annual" component={AnnualReport} />
        
         <Route path="/HelpCenter" component={Blogs} />
-        <Route path="/signin" component={signin} />
+        {/* <Route path="/signin" component={signin} />
       
-        <Route path="/Signup" component={Signup} />
+        <Route path="/Signup" component={Signup} /> */}
+        <Route path="/signin" component={NewLogin} />
+      
+      <Route path="/Signup" component={NewSignup} />
         <Route path="/catagories" component={catagories} />
         <Route path="/MyCj" component={MyCj} />
         <Route path="/ProductListing" component={ProductListing} />
@@ -131,6 +136,8 @@ function App() {
         <Route path="/PurchaseCart" component={PurchaseCart}></Route>
         <Route path="/SkuList" component={SkuList}></Route>
         <Route path="/ServiceProduct" component={ServiceProduct}></Route>
+        <Route path="/NewSignup" component={NewSignup}></Route>
+        <Route path="/NewLogin" component={NewLogin}></Route>
       </Switch>
      
  

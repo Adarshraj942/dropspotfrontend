@@ -29,7 +29,7 @@ function PurchaseCart() {
     <div className='col-2'>
     <div style={{ display: 'block', width:'1140px', }}>
     
-    <Tabs defaultActiveKey="eighth">
+    <Tabs defaultActiveKey="eighth" style={{backgroundColor:'rgba(255, 214, 0, 1)'}}>
       <Tab eventKey="first" title="One Price Dropship">
        <button style={{marginTop:'100px',marginLeft:'400px',backgroundColor:'#FFE51A',borderColor:'transparent',padding:'10px',borderRadius:'10px',width:'200px'}}>Add a Product</button>
       </Tab>

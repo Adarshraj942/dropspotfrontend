@@ -74,7 +74,7 @@ function UndeleviredOrder() {
       <div className='col-2'>
       <div style={{ display: 'block', width:'1140px', }}>
       
-      <Tabs defaultActiveKey="first">
+      <Tabs defaultActiveKey="first" style={{backgroundColor:'rgba(255, 214, 0, 1)'}}>
         <Tab eventKey="first" title="Awaiting Payments">
           <div className='row' style={{marginTop:'20px'}}>
             <div className='col-6'><input style={inputbox} type="text"  placeholder='please enter order number' /><span><button style={serchbtn}>Search</button></span></div>

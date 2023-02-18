@@ -1,5 +1,7 @@
 import React from 'react'
+import NewSignup from '../../pages/NewSignup/NewSignup'
 import './Footer.css'
+
 
 
 
@@ -8,12 +10,13 @@ import './Footer.css'
 
 function Footer() {
   return (
+     
     <>
     <div className='footercontainer'>
         <div >
 
         {/* Footer Start */}
-        <div className="container-fluid bg-black mt-5 pt-5">
+        <div className="container-fluid bg-black ">
           <div className="row px-xl-5 pt-5">
             <div className="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
               <a href className="text-decoration-none">
@@ -36,7 +39,8 @@ function Footer() {
                     <a className="text-white mb-2" href="/IntegrityConcerns"><i className="fa fa-angle-right mr-2" />Raising Integrity Concerns</a>
                     <a className="text-white mb-2" href="/PrivacyPolicy"><i className="fa fa-angle-right mr-2" />Privacy Policy</a>
                     <a className="text-white mb-2" href="/PaymentMethods"><i className="fa fa-angle-right mr-2" />Payment methods</a>
-                    <a className="text-white mb-2" href="/Api"><i className="fa fa-angle-right mr-2" />Api</a>
+                    <a className="text-white mb-2" href="/NewSignup"><i className="fa fa-angle-right mr-2" />NewSignup</a>
+                    <a className="text-white mb-2" href="/NewLogin"><i className="fa fa-angle-right mr-2" />NewLogin</a>
                     <a className="text-white mb-2" href="/StoreAutherizationAgreement"><i className="fa fa-angle-right mr-2" />Store Autherization Agreement</a>
                   </div>
                 </div>
@@ -60,6 +64,8 @@ function Footer() {
 
                     <a className="text-white mb-2" href="/Helpcenter"><i className="fa fa-angle-right mr-2" />Help Center</a>
                     <a className="text-white mb-2" href="/Ticket"><i className="fa fa-angle-right mr-2" />Ticket</a>
+                   
+                   
 
                   </div>
                 </div>

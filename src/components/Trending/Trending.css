@@ -15,12 +15,11 @@
 
 }
 
-.image-container {
-    position: relative;
-  
-    
-   
+.card:hover{
+    transform: translateY(-20px);
 }
+
+
 
 .thumbnail-image {
     border-radius: 10px !important;
@@ -55,7 +54,7 @@
 .first {
     position: absolute;
     width: 100%;
-    padding: 9px
+    
 }
 
 .dress-name {
@@ -66,6 +65,9 @@
 	padding-top: 10px;
 	font-family: 'Poppins';
 	line-height:22.23px;
+    padding-left: 20px;
+    font-weight:600;
+    font-size: 15px;
 }
 
 .new-price {

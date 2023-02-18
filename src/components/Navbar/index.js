@@ -35,7 +35,7 @@ const Navbar = () => {
         <NavMenu>
         <div>
         <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false " style={{backgroundColor:'white'}}>
-         <span style={{paddingRight:'10px'}}><img src={lang} style={{height:'20px'}} alt="" /></span>Language</a>
+         <span style={{paddingRight:'10px'}}><img src={lang} style={{height:'20px',textDecoration:'none'}} alt="" /></span>Language</a>
         <div className="dropdown-menu" aria-labelledby="dropdown09">
           <a className="dropdown-item" href="#fr" > Hindi</a>
           <a className="dropdown-item" href="#it" >English</a>
@@ -43,8 +43,8 @@ const Navbar = () => {
         </div>
         </div>
         <div>
-        <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false " style={{backgroundColor:'white'}}>
-         <span style={{paddingRight:'10px'}}><i class="fa fa-check-circle"></i></span>Autherization</a>
+        <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false " style={{backgroundColor:'white',textDecoration:'none'}}>
+         <span style={{paddingRight:'10px',textDecoration:'none'}}><i class="fa fa-check-circle"></i></span>Autherization</a>
         <div className="dropdown-menu" aria-labelledby="dropdown09" >
           <a className="dropdown-item" href="#fr"><img src={droptik} alt="" /></a>
           <a className="dropdown-item" href="#it"><img src={dropship} alt="" /></a>
@@ -53,22 +53,22 @@ const Navbar = () => {
           <a className="dropdown-item" href="#it"><img src={dropamazon} alt="" /></a>
         </div>
         </div>
-          <NavLink to='/wishlist' activeStyle>
-           <span style={{paddingRight:'10px'}}><i class="fa fa-heart"></i></span>Wishlist
+          <NavLink to='/wishlist' activeStyle  style={{textDecoration:'none',color:'black'}}>
+           <span style={{paddingRight:'10px',textDecoration:'none'}}><i class="fa fa-heart"></i></span>Wishlist
           </NavLink>
           <div>
       
         </div>
-          <NavLink to='/HelpCenter' activeStyle>
-          <span style={{paddingRight:'10px'}}><i class="fa fa-handshake-o"></i></span> Help Center
+          <NavLink to='/HelpCenter' activeStyle style={{textDecoration:'none',color:'black'}}>
+          <span style={{paddingRight:'10px',textDecoration:'none'}}><i class="fa fa-handshake-o"></i></span> Help Center
           </NavLink>
-          <NavLink to='/Sourcingpage' activeStyle>
-           <span style={{paddingRight:'10px'}}><i class="fa fa-group"></i></span>Sourcing
+          <NavLink to='/Sourcingpage' activeStyle style={{textDecoration:'none',color:'black'}}>
+           <span style={{paddingRight:'10px',textDecoration:'none'}}><i class="fa fa-group"></i></span>Sourcing
           </NavLink>
-          <NavLink to='/MyCj' activeStyle>
+          <NavLink to='/MyCj' activeStyle style={{textDecoration:'none',color:'black'}}>
           My Dropspot
           </NavLink>
-          {userInfo? <button style={{backgroundColor:'#FDE31A',borderRadius:'50px',padding:'10px',borderColor:'transparent'}} 
+          {userInfo? <button style={{backgroundColor:'#FDE31A',borderRadius:'50px',padding:'10px',borderColor:'transparent',textDecoration:'none',color:'black'}} 
           onClick={(e) => {
             e.preventDefault();
             swal({
@@ -88,7 +88,7 @@ const Navbar = () => {
             });
           }}
           
-          >Log out</button>:   <NavLink to='/signin' activeStyle>
+          >Log out</button>: <NavLink to='/signin' activeStyle style={{color:'black',textDecoration:'transparent'}}>
            <span><i style={{paddingRight:'10px'}} class="fa fa-user-plus"></i></span> Log in
           </NavLink>}
        {

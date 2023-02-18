@@ -29,8 +29,8 @@ const box={
       <div className='row'>
         <div className='col-2'><Sidebar /></div>
         <div className='col-10'>
-        <Tabs defaultActiveKey="first">
-        <Tab eventKey="first" title="Orders(0)">
+        <Tabs defaultActiveKey="first"style={{backgroundColor:'rgba(255, 214, 0, 1)'}} >
+        <Tab eventKey="first" title="Orders(0)" >
           <div className='row' style={{marginTop:'20px'}}>
             <div className='col'>
               <select style={box} name="name" id="value">

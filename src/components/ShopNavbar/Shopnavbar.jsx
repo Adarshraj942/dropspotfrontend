@@ -17,7 +17,7 @@ function Shopnavbar() {
     <div className="navbarContainer">
     <ul>
       <li className='listitem'><img style={{height:'30px'}} src={logo} alt="" /></li>
-      <li style={{listStyle:'none',paddingTop:'20px'}}>  
+      <li style={{listStyle:'none',paddingTop:'22px'}}>  
         <div className="input-group">
           <div className="form-outline" style={{display:'flex',height:'10px',listStyle:'none'}}>
           <form action="">

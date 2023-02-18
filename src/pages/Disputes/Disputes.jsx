@@ -42,7 +42,7 @@ const Disputes = () => {
       <div className='row'>
         <div className='col-2'><Sidebar /></div>
         <div className='col-10'>
-        <Tabs defaultActiveKey="first">
+        <Tabs defaultActiveKey="first" style={{color:'black',backgroundColor:'rgba(255, 214, 0, 1)'}}>
         <Tab eventKey="first" title="Awaiting Response">
                  
         <div className='row'  style={{marginTop:'20px'}}>

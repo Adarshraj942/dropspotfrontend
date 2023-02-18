@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Adminnavbar from './Adminnavbar/Adminnavbar'
 import Sidebar from './Sidebar/Sidebar'
 import pad from '.././assets/pad.png'
+import shopbanner from '.././assets/shopbanner.png'
 import parcel from '.././assets/parcel.png'
 import timer from '.././assets/timer.png'
 import order from '.././assets/order.png'
@@ -48,6 +49,8 @@ function MyCj() {
       history.push("/signin");
     }
   }, []);
+
+ 
   return (
     <div>
       <Adminnavbar />
@@ -57,13 +60,13 @@ function MyCj() {
             <Sidebar />
           </div>
           <div className='col-10'>
-            <div align="center" className='row' style={{paddingTop:'40px'}}>
+            <div align="center" className='row' style={{paddingTop:'20px'}}>
               <div className='col'><span><img src={avatar} style={{width:'50px'}} alt="" /><h6>Name</h6></span></div>
               <div className='col'> <button style={btn}>Points</button> </div>
               <div className='col'> <button style={btn}> Wallet</button></div>
               <div className='col'> <button style={amountbtn}>Sales Amount:$42</button> </div>
             </div>
-            <div align="center" className='row' style={{paddingTop:'40px'}}>
+            <div align="center" className='row' style={{paddingTop:'20px'}}>
               <div className='col'>
                 <div><img src={pad} alt="" /></div>
                 <div><button style={inventbtn} >Inventory Alert : 0</button></div>
@@ -87,6 +90,26 @@ function MyCj() {
               </div>
               </div>
             </div>
+            <div  style={{paddingTop:'40px',paddingBottom:'40px'}}><h5 style={{fontSize:'25px',fontWeight:'900px',fontStyle:'bold'}}>Activated Stores</h5></div>
+            <div className='row'  style={{marginTop:'20px'}}>
+               <div className='col-6'>
+                <div className='card' style={{width:'300px',padding:'25px',borderRadius:'20px'}}>
+                  <div align="center"><img src={shopbanner} alt="" /></div>
+                  <div style={{paddingLeft:'20px',paddingTop:'20px'}}><h6>Store Name:</h6></div>
+                  <div style={{paddingLeft:'20px'}}><h6>24 Orders:</h6></div>
+                  <div style={{paddingLeft:'20px'}}><h6>24 Revenue:</h6></div>
+                </div>
+               </div>
+               <div className='col-6'>
+               <div className='card' style={{width:'300px',padding:'25px',borderRadius:'20px'}}>
+                <div><img src={shopbanner} alt="" /></div>
+                <div style={{paddingLeft:'20px',paddingTop:'20px',float:'left'}}><h6>Store Name:</h6></div>
+                  <div style={{paddingLeft:'20px',float:'left'}}><h6>24 Orders:</h6></div>
+                  <div style={{paddingLeft:'20px',float:'left'}}><h6>24 Revenue:</h6></div>
+                </div>
+               </div>
+            </div>
+           
           </div>
         </div>
 

@@ -57,8 +57,7 @@ export default class SimpleSlider extends Component {
                                <span  className="fa fa-star"></span>
                      </div>
                        <p class="review-text fs-5" style={{width:'500px'}}>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                       <h5 class="review-cli">Client Name</h5>
-                        <span class="text-primary review-pro">Profession</span>
+
                      </div>
              </div>
          </div>
@@ -79,8 +78,7 @@ export default class SimpleSlider extends Component {
                                <span className="fa fa-star"></span>
                            </div>
                            <p class="review-text fs-5" style={{width:'500px'}}>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                           <h5 class="review-cli">Client Name</h5>
-                           <span class="text-primary review-pro">Profession</span>
+                           
                          </div>
                        </div>
          </div>
@@ -101,8 +99,7 @@ export default class SimpleSlider extends Component {
                                <span className="fa fa-star"></span>
                            </div>
                            <p class="review-text fs-5" style={{width:'500px'}}>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                           <h5 class="review-cli">Client Name</h5>
-                           <span class="text-primary review-pro">Profession</span>
+                          
                          </div>
                        </div>
          </div>
@@ -123,8 +120,7 @@ export default class SimpleSlider extends Component {
                                <span className="fa fa-star"></span>
                            </div>
                            <p class="review-text fs-5" style={{width:'500px'}}>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                           <h5 class="review-cli">Client Name</h5>
-                           <span class="text-primary review-pro">Profession</span>
+                          
                          </div>
                        </div>
          </div>
@@ -145,8 +141,7 @@ export default class SimpleSlider extends Component {
                                <span className="fa fa-star"></span>
                            </div>
                            <p class="review-text fs-5" style={{width:'500px'}}>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                           <h5 class="review-cli">Client Name</h5>
-                           <span class="text-primary review-pro">Profession</span>
+                          
                          </div>
                        </div>
          </div>
@@ -167,8 +162,7 @@ export default class SimpleSlider extends Component {
                                <span className="fa fa-star"></span>
                            </div>
                            <p class="review-text fs-5" style={{width:'500px'}}>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                           <h5 class="review-cli">Client Name</h5>
-                           <span class="text-primary review-pro">Profession</span>
+                          
                          </div>
                        </div>
          </div>

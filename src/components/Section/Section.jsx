@@ -100,74 +100,74 @@ function Section() {
            
         <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-            <div className="flexutemleft" style={{marginLeft:'10px'}}><img src={purse} alt="" /></div>
-            <div className="flexutemright" style={{marginLeft:'40px'}}>Bags and shoes</div>
+            <div className="flexutemleft" style={{marginLeft:'40px'}}><img src={purse} alt="" /></div>
+            <div className="flexutemright" style={{marginLeft:'15px'}}>Bags and shoes</div>
           </div>
          </button>
         <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft"  style={{marginLeft:'10px'}}><img src={ring} alt="" /></div>
-            <div  className="flexutemright" style={{marginLeft:'40px'}}>Jewelory & Watches</div>
+          <div className="flexutemleft"  style={{marginLeft:'40px'}}><img src={ring} alt="" /></div>
+            <div  className="flexutemright" style={{marginLeft:'15px'}}>Jewelory & Watches</div>
           </div>
          </button>
          <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'10px'}}><img src={tablet} alt="" /></div>
-            <div className="flexutemright" style={{marginLeft:'40px'}}>Hair,Beauty & Hair</div>
+          <div className="flexutemleft" style={{marginLeft:'40px'}}><img src={tablet} alt="" /></div>
+            <div className="flexutemright" style={{marginLeft:'15px'}}>Hair,Beauty & Hair</div>
           </div>
          </button>
          <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'10px'}}><img src={dress} alt="" /></div>
-            <div className="flexutemright" style={{marginLeft:'40px'}}>Women's Clothing</div>
+          <div className="flexutemleft" style={{marginLeft:'40px'}}><img src={dress} alt="" /></div>
+            <div className="flexutemright" style={{marginLeft:'15px'}}>Women's Clothing</div>
           </div>
          </button>
          <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'10px'}}><img src={home} alt="" /></div>
-            <div className="flexutemright" style={{marginLeft:'40px'}}> Home,Garden & Furtinure</div>
+          <div className="flexutemleft" style={{marginLeft:'40px'}}><img src={home} alt="" /></div>
+            <div className="flexutemright" style={{marginLeft:'15px'}}> Home,Garden & Furtinure</div>
           </div>
          </button>
          <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'10px'}}><img src={hat} alt="" /></div>
-            <div className="flexutemright" style={{marginLeft:'40px'}}>Phone and Accessories</div>
+          <div className="flexutemleft" style={{marginLeft:'40px'}}><img src={hat} alt="" /></div>
+            <div className="flexutemright" style={{marginLeft:'15px'}}>Phone and Accessories</div>
           </div>
          </button>
          <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'10px'}}><img  src={sticks}alt="" /></div>
-            <div className="flexutemright" style={{marginLeft:'40px'}}>Sports & Outdoors</div>
+          <div className="flexutemleft" style={{marginLeft:'40px'}}><img  src={sticks}alt="" /></div>
+            <div className="flexutemright" style={{marginLeft:'15px'}}>Sports & Outdoors</div>
           </div>
          </button>
          <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'10px'}}><img  src={bike} alt="" /></div>
-            <div className="flexutemright" style={{marginLeft:'40px'}}>Automobiles & Motorcycle</div>
+          <div className="flexutemleft" style={{marginLeft:'40px'}}><img  src={bike} alt="" /></div>
+            <div className="flexutemright" style={{marginLeft:'10px'}}>Automobiles & Motorcycle</div>
           </div>
          </button>
          <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'10px'}}><img  src={tablet} alt="" /></div>
-            <div className="flexutemright" style={{marginLeft:'40px'}}>Health,Beauty & Hair</div>
+          <div className="flexutemleft" style={{marginLeft:'40px'}}><img  src={tablet} alt="" /></div>
+            <div className="flexutemright" style={{marginLeft:'10px'}}>Health,Beauty & Hair</div>
           </div>
          </button>
          <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'10px'}}><img  src={toy} alt="" /></div>
-            <div className="flexutemright" style={{marginLeft:'40px'}}>Toys, Kids & Babies</div>
+          <div className="flexutemleft" style={{marginLeft:'40px'}}><img  src={toy} alt="" /></div>
+            <div className="flexutemright" style={{marginLeft:'20px'}}>Toys, Kids & Babies</div>
           </div>
          </button>
          <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'10px'}}><img  src={shirt} alt="" /></div>
-            <div className="flexutemright" style={{marginLeft:'40px'}}> Men's Clothing</div>
+          <div className="flexutemleft" style={{marginLeft:'40px'}}><img  src={shirt} alt="" /></div>
+            <div className="flexutemright" style={{marginLeft:'20px'}}> Men's Clothing</div>
           </div>
          </button>
          <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-            <div className="flexutemleft" style={{marginLeft:'10px'}}><img src={circuit} alt="" /></div>
-            <div className="flexutemright" style={{marginLeft:'40px'}}> Consumer Electronics</div>
+            <div className="flexutemleft" style={{marginLeft:'40px'}}><img src={circuit} alt="" /></div>
+            <div className="flexutemright" style={{marginLeft:'20px'}}> Consumer Electronics</div>
           </div>
          </button>
        
@@ -246,7 +246,7 @@ function Section() {
           </div>
           <div  id="imagecol" className="col" style={{backgroundColor:'rgba(rgba(0, 0, 0, 0.15))',boxShadow:'4px 5px 8px whitesmoke',borderRadius:'20px',marginLeft:"15rem"}}>
             <div className="col" >
-              <div align="center" className="row" style={{paddingTop:'20px',gap:'10px'}} >
+              <div align="center" className="row" style={{paddingTop:'20px',gap:'20px'}} >
                 <div className="col" >
                   <img src={freestore} /><br />
                   <div className="div" style={{}}>free Shipping</div>

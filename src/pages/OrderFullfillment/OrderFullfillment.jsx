@@ -51,10 +51,10 @@ function OrderFullfillment() {
       <div className='row'>
       <div className='col-2'><Sidebar /></div>
       <div className='col-2'>
-      <div style={{ display: 'block', width:'1140px', }}>
+      <div style={{ display: 'block', width:'1140px',color:'black' }}>
       
-      <Tabs defaultActiveKey="eighth">
-        <Tab eventKey="first" title="All">
+      <Tabs defaultActiveKey="eighth" style={{backgroundColor:'rgba(255, 214, 0, 1)',color:'black',textDecoration:'none'}}>
+        <Tab eventKey="first" title="All" >
           <div className='row' style={{marginTop:'20px'}}>
             <div className='col'><input style={inputbox} type="date" /></div>
             <div className='col'><input style={inputbox} placeholder='please enter order number' type="text" /></div>

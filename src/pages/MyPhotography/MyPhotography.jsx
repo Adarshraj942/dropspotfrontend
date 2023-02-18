@@ -12,7 +12,7 @@ function MyPhotography() {
       <div className='row'>
         <div className='col-2'><Sidebar /></div>
         <div className='col-10'>
-        <Tabs defaultActiveKey="second">
+        <Tabs defaultActiveKey="second" style={{backgroundColor:'rgba(255, 214, 0, 1)'}}>
         <Tab eventKey="first" title="Photography Orders">
           Hii, I am 1st tab content
         </Tab>

@@ -110,7 +110,7 @@ const [filterUsers,setFilteredUsers]=useState([]);
       <div className='col-10'>
   
 
-      <Tabs defaultActiveKey="first">
+      <Tabs defaultActiveKey="first" style={{backgroundColor:'rgba(255, 214, 0, 1)'}}>
 
         <Tab  eventKey="first"  title="Wishlist">
           <div className='row' style={{marginTop:'20px'}}>

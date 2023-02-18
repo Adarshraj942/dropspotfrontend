@@ -8,6 +8,13 @@ import list from "../../assets/list.png";
 import { useEffect } from "react";
 import { getAllProducts } from "../../Api/ProductRequest.js";
 import { addToWishlist, getWishlist } from "../../Api/WishlistRoute";
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 import swal from "sweetalert";
 
@@ -25,8 +32,9 @@ const btn_two = {
 };
 
 const btn_third = {
-  backgroundColor: "rgba(255, 214, 0, 1)",
-
+  backgroundColor: "white",
+fontWeight:'500',
+fontSize:'15px',
   color: "black",
   width: "100px",
   borderRadius: "20px",
@@ -34,7 +42,8 @@ const btn_third = {
   marginLeft: "5px",
   fontFamily: "poppins",
   float:'right',
-  border: '0.5px solid #FDE31A'
+ 
+  borderColor:'rgba(255, 214, 0, 1)',
 
  
 };
@@ -46,6 +55,8 @@ const list_second = {
   lineHeigt: "22.23px",
   paddingLeft: "15px",
   fontFamily: "poppins",
+  backgroundColor:'transparent',
+  borderColor:'transparent'
 
  
 
@@ -131,17 +142,27 @@ const [toggle,setToggle]=useState(false)
 const handleToggle=()=>{
   setToggle(!toggle)
 }
+const [open, setOpen] = React.useState(false);
+
+const handleClickOpen = () => {
+  setOpen(true);
+};
+
+const handleClose = () => {
+  setOpen(false);
+};
+
   return (
     <>
-   <div id="trendingcontainer" className="conatiner-fluid">
-    <div className="col-md-16" style={{width:'90%',margin:'5px',marginLeft:'3%'}}>
+   <div align="center"  id="trendingcontainer" className="conatiner-fluid">
+    <div className="col-md-16" style={{width:'100%'}}>
     <div className="row">
           {products &&
             products.length > 0 &&
             products.map((ele) => (
               <div className="col"  >
                 <div align="center" className="card" style={carddesign}>
-                  <div className="image-container">
+                  <div className="image" style={{width:'100%'}}>
                     <div className="first">
                       <div className="d-flex justify-content-between align-items-center">
                         <span className="wishlist">
@@ -168,7 +189,7 @@ const handleToggle=()=>{
                     </div>{" "}
                     <img
                      src={ele.image1?"https://server.dropspot.in/images/"+ele.image1:"" }
-                     style={{cursor:"pointer",width:"170px",height:"170px" }}
+                     style={{cursor:"pointer",width:"100%",height:"170px" }}
                      onClick={() => {
                       history.push(`/ProductPage/${ele._id}`)
                   } }
@@ -176,13 +197,87 @@ const handleToggle=()=>{
                   </div>
                   <div className="product-detail-container">
                     <div className="d-flex  ">
-                      <h4 align="center" className="dress-name">
+                      <h4 align="left" className="dress-name" >
                         {ele.name}
                       </h4>
                     </div>
                     <div className="row">
                       <div className="col">
-                        <h5 align="left"  style={list_second}>List</h5>
+                        <div ><button onClick={handleClickOpen} style={list_second}>List</button>
+                        <Dialog  open={open} onClose={handleClose}>
+                        
+                        <DialogContent>
+                          <DialogContentText>
+                           <div>
+                            <div className="row" >
+                              <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px'}}>Listed</button></div>
+                              <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'80px'}}>Queue</button></div>
+                              <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'100px'}}>On Listing</button></div>
+                              <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'150px'}}>Listing Failed</button></div>
+                            </div>
+                           </div>
+                          </DialogContentText>
+                          <div><h6> <button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'150px',height:'40px',marginTop:'20px'}}>Store</button> <span style={{marginLeft:'20px'}}>
+                            <select style={{backgroundColor:'#DEDEDE',fontSize:'15px',width:"300px",height:'40px',borderColor:'transparent',borderRadius:'20px'}} name="" id="">
+                            <option value="">Select</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            </select></span></h6>
+                            </div>
+                            <div><h6> <button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'120px',height:'50px',marginTop:'40px'}}>Varient</button> <span style={{marginLeft:'20px'}}>
+                              </span></h6>
+                            </div>
+                            <div className="row" style={{marginTop:'20px'}}>
+                            <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'100px',height:'50px',marginTop:'40px'}}>Bulk Revise</button></div>
+                            <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'100px',height:'50px',marginTop:'40px'}}>Price Change</button></div>
+
+                            <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'50px',height:'50px',marginTop:'40px'}}>ok</button></div>
+                            <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'150px',height:'50px',marginTop:'40px'}}>Recommended Listed Price</button></div>
+                            </div>
+                            
+                            <div className="row" style={{backgroundColor:'rgba(253, 227, 26, 1)',borderColor:'transparent',marginTop:'40px'}} >
+                              <div className="col"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}>Image</button></div>
+                              <div className="col"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}>Sku</button></div>
+                              <div className="col"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}>Style</button></div>
+                              <div className="col"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}>RRP</button></div>
+                              <div className="col"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}>Price</button></div>
+                              <div className="col"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}>ShippingFee</button></div>
+                              <div className="col"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}>Service fee</button></div>
+                              <div className="col"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}>Total  Cost</button></div>
+
+                            </div>
+                            <div className="row" style={{marginTop:'20px'}}>
+                                <div><h6 >Shipping Method <span>
+                                  <select style={{backgroundColor:'#DEDEDE',fontSize:'15px',width:"300px",height:'40px',borderColor:'transparent',borderRadius:'20px',marginLeft:'20px'}} name="" id="">
+                                    <option value="">option1</option></select></span></h6></div>
+                              </div>
+                            
+                            <div>
+                              <div className="row" style={{backgroundColor:'rgba(0, 0, 0, 1)',marginTop:'20px'}}>
+                                <div className="col"><p style={{color:'white'}}>Estimated Delvery Time</p></div>
+                                <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:"20px",marginTop:'20px'}}>7 8 days</button></div>
+                                <div className="col"><p style={{color:'white'}}>Shipping Cost</p> </div>
+                                <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:"20px",marginTop:'20px',}}>14.25</button></div>
+                                <div className="col"><p style={{color:'white'}}>Tracking Information</p></div>
+                              </div>
+                            </div>
+                            <div>
+
+                              <div className="row">
+
+                                <button className="col-4" style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:"20px",marginTop:'20px',width:'100px'}}>Edit before listing</button>
+                              </div>
+                             
+                            </div>
+                            
+
+                        </DialogContent>
+                        <DialogActions>
+                          <Button onClick={handleClose} style={{color:'black',padding:'5px',fontSize:'12px'}}>Cancel</Button>
+                          <Button onClick={handleClose} style={{backgroundColor:'#FDE31A',color:'black',padding:'5px',fontSize:'12px'}}>List now</Button>
+                        </DialogActions>
+                      </Dialog>
+                      </div>
                       </div>
                     </div>
                     <div className="row">
