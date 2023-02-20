@@ -159,6 +159,141 @@ console.log(newPost);
     <form className="container">
         <div align="center" ><h5 className='Individual'>Individual Products</h5></div>
         <div>
+
+             <h6><label className="labelstyle">Product Name</label>
+            <span>
+              <input type="text" className='selectbox' ref={name} required />
+              {/* <select className='selectbox' name="#">
+                <option value="#">Select</option>
+                <option value="#">#link1</option>
+                <option value="#">link2</option>
+                <option value="#">#link3</option>
+              </select> */}
+            </span> 
+          </h6>
+
+
+           <h6><label className="labelstyle">Product tag</label>
+            <span>
+            <input type="text" className='selectbox' ref={desc} required />
+              {/* <select className='selectbox' name="#">
+                <option value="#">Select</option>
+                <option value="#">#link1</option>
+                <option value="#">link2</option>
+                <option value="#">#link3</option>
+              </select> */}
+            </span> 
+          </h6>
+      
+
+           <h6><label className="labelstyle">Product discription</label>
+            <span>
+              <input type="text" className='selectbox' ref={descrip} required />
+              {/* <select className='selectbox' name="#">
+                <option value="#">Select</option>
+                <option value="#">#link1</option>
+                <option value="#">link2</option>
+                <option value="#">#link3</option>
+              </select> */}
+            </span> 
+          </h6>
+
+           <h6><label className="labelstyle">SKU Id</label>
+            <span>
+              <input type="text" className='selectbox' ref={skuId} required />
+              {/* <select className='selectbox' name="#">
+                <option value="#">Select</option>
+                <option value="#">#link1</option>
+                <option value="#">link2</option>
+                <option value="#">#link3</option>
+              </select> */}
+            </span> 
+          </h6>
+
+
+
+
+          <h6><label className="labelstyle">Category</label>
+            <span>
+               <select className='selectbox' ref={category}>
+                <option value="none">none</option>
+                <option value="Clothes">Clothes</option>
+                <option value="Jwells">Jwells</option>
+                <option value="electronics">electronics</option>
+              </select>
+            </span> 
+          </h6>
+          <h6><label className="labelstyle">Sub category</label>
+            <span>
+            <select className='selectbox' ref={subCategory}>
+                <option value="none">none</option>
+                <option value="ladies">ladies</option>
+                <option value="gents">gents</option>
+                <option value="premium">premium</option>
+              </select>
+            </span> 
+          </h6>
+
+
+           <h6><label className="labelstyle">Show Similar Product</label>
+            <span style={{marginLeft:'30px'}}>
+            <input className='checkbox-round' type="checkbox" name />
+              <label className='Checklabel'>yes</label>
+              <input style={{marginLeft:'20px'}} className='checkbox-round' type="checkbox" name />
+              <label className='Checklabel'>No</label>
+          
+            </span> 
+          </h6>
+
+        
+          <h6><label className="labelstyle">Manufacturer Price</label>
+            <span>
+            <input type="text" className='usdselecbox' ref={price} required />
+              {/* <select className='usdselecbox' name="#" >
+                <option value="#">Usd</option>
+                <option value="#">#link1</option>
+                <option value="#">link2</option>
+                <option value="#">#link3</option>
+              </select> */}
+            </span>
+          </h6>
+          <h6><label className="labelstyle">Maximum Retail Price</label>
+            <span>
+            <input type="text" className='usdselecbox' ref={maxprice} required />
+              {/* <select className='usdselecbox' name="#" >
+                <option value="#">Usd</option>
+                <option value="#">#link1</option>
+                <option value="#">link2</option>
+                <option value="#">#link3</option>
+              </select> */}
+            </span>
+          </h6>
+         
+          <h6><label className="labelstyle">Purchasing item</label>
+            <span style={{marginLeft:'30px'}}>
+            <input className='checkbox-round' type="checkbox" name />
+              <label className='Checklabel' >Bulk</label>
+              
+              <input style={{marginLeft:'20px'}} className='checkbox-round' type="checkbox" name />
+              <label  className='Checklabel' >Dropshipping</label>
+              
+            </span> 
+          </h6>
+          <h6><label  className="labelstyle"> Quantity Available</label>
+            <span>
+            <input type="text" className='selectbox' ref={quantity} required />
+              {/* <select className='selectbox' name="#">
+                <option value="#">Select</option>
+                <option value="#">#link1</option>
+                <option value="#">link2</option>
+                <option value="#">#link3</option>
+              </select> */}
+            </span> 
+          </h6>
+
+
+
+
           <p><label className="labelstyle">Attachment</label>
             <span>
               <input type="file" id="myFile" name="myImage"  ref={imageRef} onChange={onImageChange} />
@@ -183,28 +318,8 @@ console.log(newPost);
          </span>
          <br />
           </p>
-          <h6><label className="labelstyle">Product tag</label>
-            <span>
-            <input type="text" className='selectbox' ref={desc} required />
-              {/* <select className='selectbox' name="#">
-                <option value="#">Select</option>
-                <option value="#">#link1</option>
-                <option value="#">link2</option>
-                <option value="#">#link3</option>
-              </select> */}
-            </span> 
-          </h6>
-          <h6><label className="labelstyle">Product title</label>
-            <span>
-              <input type="text" className='selectbox' ref={name} required />
-              {/* <select className='selectbox' name="#">
-                <option value="#">Select</option>
-                <option value="#">#link1</option>
-                <option value="#">link2</option>
-                <option value="#">#link3</option>
-              </select> */}
-            </span> 
-          </h6>
+        
+        
           <h6><label className="labelstyle">Material</label>
             <span>
               <input type="text" className='selectbox' ref={Material} required />
@@ -217,48 +332,9 @@ console.log(newPost);
             </span> 
           </h6>
 
-          <h6><label className="labelstyle">Category</label>
-            <span>
-               <select className='selectbox' ref={category}>
-                <option value="none">none</option>
-                <option value="Clothes">Clothes</option>
-                <option value="Jwells">Jwells</option>
-                <option value="electronics">electronics</option>
-              </select>
-            </span> 
-          </h6>
-          <h6><label className="labelstyle">Sub category</label>
-            <span>
-            <select className='selectbox' ref={subCategory}>
-                <option value="none">none</option>
-                <option value="ladies">ladies</option>
-                <option value="gents">gents</option>
-                <option value="premium">premium</option>
-              </select>
-            </span> 
-          </h6>
-          <h6><label className="labelstyle">Color</label>
-            <span>
-            <input type="text" className='usdselecbox' ref={color} required />
-              {/* <select className='usdselecbox' name="#" >
-                <option value="#">Usd</option>
-                <option value="#">#link1</option>
-                <option value="#">link2</option>
-                <option value="#">#link3</option>
-              </select> */}
-            </span>
-          </h6>
-          <h6><label className="labelstyle">Product discription</label>
-            <span>
-              <input type="text" className='selectbox' ref={descrip} required />
-              {/* <select className='selectbox' name="#">
-                <option value="#">Select</option>
-                <option value="#">#link1</option>
-                <option value="#">link2</option>
-                <option value="#">#link3</option>
-              </select> */}
-            </span> 
-          </h6>
+         
+        
+        
           <h6><label className="labelstyle">Product height</label>
             <span>
               <input type="text" className='selectbox' ref={height} required />
@@ -292,17 +368,7 @@ console.log(newPost);
               </select> */}
             </span> 
           </h6>
-          <h6><label className="labelstyle">SKU Id</label>
-            <span>
-              <input type="text" className='selectbox' ref={skuId} required />
-              {/* <select className='selectbox' name="#">
-                <option value="#">Select</option>
-                <option value="#">#link1</option>
-                <option value="#">link2</option>
-                <option value="#">#link3</option>
-              </select> */}
-            </span> 
-          </h6>
+         
           <h6><label className="labelstyle">Product deapth</label>
             <span>
               <input type="text" className='selectbox' ref={deapth} required />
@@ -314,68 +380,7 @@ console.log(newPost);
               </select> */}
             </span> 
           </h6>
-          <h6><label className="labelstyle">Accept Similar Product</label>
-            <span style={{marginLeft:'30px'}}>
-            <input className='checkbox-round' type="checkbox" name />
-              <label className='Checklabel'>yes</label>
-              <input style={{marginLeft:'20px'}} className='checkbox-round' type="checkbox" name />
-              <label className='Checklabel'>No</label>
-          
-            </span> 
-          </h6>
-          <h6><label className="labelstyle">Target Price</label>
-            <span>
-            <input type="text" className='usdselecbox' ref={price} required />
-              {/* <select className='usdselecbox' name="#" >
-                <option value="#">Usd</option>
-                <option value="#">#link1</option>
-                <option value="#">link2</option>
-                <option value="#">#link3</option>
-              </select> */}
-            </span>
-          </h6>
-          <h6><label className="labelstyle">Maximum Price</label>
-            <span>
-            <input type="text" className='usdselecbox' ref={maxprice} required />
-              {/* <select className='usdselecbox' name="#" >
-                <option value="#">Usd</option>
-                <option value="#">#link1</option>
-                <option value="#">link2</option>
-                <option value="#">#link3</option>
-              </select> */}
-            </span>
-          </h6>
-          <h6><label className="labelstyle">Destination Country</label>
-            <span style={{marginLeft:'30px'}}>
-              <select className='selectbox' name="#">
-                <option value="#">Select</option>
-                <option value="#">India</option>
-                <option value="#">Us</option>
-                <option value="#">China</option>
-              </select>
-            </span>
-          </h6>
-          <h6><label className="labelstyle">Purchasing item</label>
-            <span style={{marginLeft:'30px'}}>
-            <input className='checkbox-round' type="checkbox" name />
-              <label className='Checklabel' >Bulk</label>
-              
-              <input style={{marginLeft:'20px'}} className='checkbox-round' type="checkbox" name />
-              <label  className='Checklabel' >Dropshipping</label>
-              
-            </span> 
-          </h6>
-          <h6><label  className="labelstyle">Estamated Quantity</label>
-            <span>
-            <input type="text" className='selectbox' ref={quantity} required />
-              {/* <select className='selectbox' name="#">
-                <option value="#">Select</option>
-                <option value="#">#link1</option>
-                <option value="#">link2</option>
-                <option value="#">#link3</option>
-              </select> */}
-            </span> 
-          </h6>
+        
         </div>
         <br />
         <br />
@@ -387,7 +392,7 @@ console.log(newPost);
           <div className='flex-item-right' style={{marginLeft:'80px'}}>
 
           <button className='subbtn'onClick={handleSubmit} disabled={loading}>
-                         {loading?"Uploading...":"Share"}
+                         {loading?"Uploading...":"Add Product"}
                      </button>
           </div>
         </div>
@@ -401,7 +406,7 @@ console.log(newPost);
 
     <br />
       <button className='subbtn'onClick={handleCsvSubmit} disabled={loading}>
-                         {loading?"Uploading...":"Share"}
+                         {loading?"Uploading...":"Add Products"}
                      </button>
       </form>
       <ToastContainer />
