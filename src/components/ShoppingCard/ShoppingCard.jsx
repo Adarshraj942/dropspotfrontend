@@ -14,12 +14,12 @@ import bigcomerce from '../../assets/bigecomerce.png'
 function ShoppingCard() {
   return (
    <div>
-    <div className='container-fluid'>
-        <div align="center" className='row' style={{paddingTop:'40px'}}>
-            <div className='col'><img src={etc} alt="" /></div>
-            <div className='col'><img src={WIX} alt="" /></div>
-            <div className='col'><img src={ish} alt="" /></div>
-            <div className='col'><img src={wcom} alt="" /></div>
+    <div align="center" className='container'>
+        <div align="center" className='row' >
+            <div className='col-3'><img src={etc} alt="" /></div>
+            <div className='col-3'><img src={WIX} alt="" /></div>
+            <div className='col-3'><img src={ish} alt="" /></div>
+            <div className='col-3'><img src={wcom} alt="" /></div>
         </div>
         <div  align="center"  className='row'>
             <div className='col'><img src={d2c} alt="" /></div>

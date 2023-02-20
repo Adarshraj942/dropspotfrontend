@@ -12,7 +12,7 @@ import Blogs from "./pages/Helpcenter";
 
 
 import Signup  from "./pages/Signup/Signup";
-
+import Otp from "./components/Otp/Otp"
 import catagories from './pages/catagories';
 import signin from "./pages/Signin/Signin";
 
@@ -87,7 +87,7 @@ function App() {
       
         <Route path="/Signup" component={Signup} /> */}
         <Route path="/signin" component={NewLogin} />
-      
+        <Route path="/verifymobile" component={Otp} />
       <Route path="/Signup" component={NewSignup} />
         <Route path="/catagories" component={catagories} />
         <Route path="/MyCj" component={MyCj} />

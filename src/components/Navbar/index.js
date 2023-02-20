@@ -7,6 +7,7 @@ import {
   NavMenu,
   
 } from './NavbarElements';
+import './Navbar.css'
 
 
 import swal from "sweetalert";
@@ -33,11 +34,11 @@ const Navbar = () => {
       <Nav>
         <Bars />
         <NavMenu>
-        <div>
+        <div className='links'>
         <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false " style={{backgroundColor:'white'}}>
          <span style={{paddingRight:'10px'}}><img src={lang} style={{height:'20px',textDecoration:'none'}} alt="" /></span>Language</a>
         <div className="dropdown-menu" aria-labelledby="dropdown09">
-          <a className="dropdown-item" href="#fr" > Hindi</a>
+          <a className="dropdown-item" href="#fr"> Hindi</a>
           <a className="dropdown-item" href="#it" >English</a>
 
         </div>
@@ -92,7 +93,7 @@ const Navbar = () => {
            <span><i style={{paddingRight:'10px'}} class="fa fa-user-plus"></i></span> Log in
           </NavLink>}
        {
-        userInfo?"":   <NavLink style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'50px'}} to='/Signup' activeStyle>
+        userInfo?"":   <NavLink style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'50px',height:'40px'}} to='/Signup' activeStyle>
         SignUp
         </NavLink>
        }

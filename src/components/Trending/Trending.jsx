@@ -18,45 +18,21 @@ import DialogTitle from '@mui/material/DialogTitle';
 
 import swal from "sweetalert";
 
-const btn_two = {
-  backgroundColor: "rgba(255, 214, 0, 1)",
-  
-  color: "black",
-  width: "70px",
-  borderRadius: "20px",
-  marginTop: "20px",
-  fontFamily: "poppins",
-  marginright:'2px',
-  float:'left',
-  border: '0.5px solid #FDE31A'
-};
 
-const btn_third = {
-  backgroundColor: "white",
-fontWeight:'500',
-fontSize:'15px',
-  color: "black",
-  width: "100px",
-  borderRadius: "20px",
-  marginTop: "20px",
-  marginLeft: "5px",
-  fontFamily: "poppins",
-  float:'right',
- 
-  borderColor:'rgba(255, 214, 0, 1)',
 
- 
-};
+
 const list_second = {
   color: "rgba(165, 165, 165, 1)",
   fontstyle: "Poppins",
   fontWeight: "500",
-  fontSize: "17.82px",
+  fontSize: "13.82px",
   lineHeigt: "22.23px",
-  paddingLeft: "15px",
+  paddingLeft: "13px",
   fontFamily: "poppins",
   backgroundColor:'transparent',
-  borderColor:'transparent'
+  borderColor:'transparent',
+  float:'left',
+  paddingBottom:'10px'
 
  
 
@@ -64,10 +40,11 @@ const list_second = {
 const carddesign = {
   borderRadius: "16px",
   border: "1px solid rgba(255, 255, 255, 0.3)",
- height:'330px',
-  boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+ height:'380px',
+ boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)" ,
   background: "rgba(255, 255, 255, 0.2)",
   backdropFilter: "blur(10px)",
+ 
 };
 
 function Trending() {
@@ -155,7 +132,7 @@ const handleClose = () => {
   return (
     <>
    <div align="center"  id="trendingcontainer" className="conatiner-fluid">
-    <div className="col-md-16" style={{width:'100%'}}>
+    <div className="col-md-14" style={{marginLeft:'40px',marginRight:'40px'}}>
     <div className="row">
           {products &&
             products.length > 0 &&
@@ -163,30 +140,7 @@ const handleClose = () => {
               <div className="col"  >
                 <div align="center" className="card" style={carddesign}>
                   <div className="image" style={{width:'100%'}}>
-                    <div className="first">
-                      <div className="d-flex justify-content-between align-items-center">
-                        <span className="wishlist">
-                        {/* <i class= "fa fa-heart"></i>
-                        <i class= " fa fa-heart-o"></i> */}
-                         
-
-                         {(toggle==false)?<i className=" fa fa-heart-o" onClick={()=>{
-                                wishlist(ele._id)
-                                
-                                handleToggle()
-                               }} />:  <i className=" fa fa-heart" onClick={()=>{
-                                wishlist(ele._id)
-                                    handleToggle()
-                               }} />}
-                              
-
-                               
-
-                        
-                        </span>{" "}
-                        <span className="discount">Queue</span>{" "}
-                      </div>
-                    </div>{" "}
+                    
                     <img
                      src={ele.image1?"https://server.dropspot.in/images/"+ele.image1:"" }
                      style={{cursor:"pointer",width:"100%",height:"170px" }}
@@ -196,14 +150,15 @@ const handleClose = () => {
                      />
                   </div>
                   <div className="product-detail-container">
-                    <div className="d-flex  ">
+                    <div className="d-flex">
                       <h4 align="left" className="dress-name" >
                         {ele.name}
                       </h4>
                     </div>
                     <div className="row">
                       <div className="col">
-                        <div ><button onClick={handleClickOpen} style={list_second}>List</button>
+                        <div ><button onClick={handleClickOpen} style={list_second}>Quantity : {ele.quantity}</button>
+                     
                         <Dialog  open={open} onClose={handleClose}>
                         
                         <DialogContent>
@@ -280,24 +235,46 @@ const handleClose = () => {
                       </div>
                       </div>
                     </div>
+                    
                     <div className="row">
                       <div className="col">
-                        <button  className="super_btn" >{ele.price}</button>
+                      <div className="first">
+                      <div className="d-flex justify-content-between align-items-center">
+                        <span className="wishlist">
+                        {/* <i class= "fa fa-heart"></i>
+                        <i class= " fa fa-heart-o"></i> */}
+                         
+
+                         {(toggle==false)?<i className=" fa fa-heart-o" onClick={()=>{
+                                wishlist(ele._id)
+                                
+                                handleToggle()
+                               }} />:  <i className=" fa fa-heart" onClick={()=>{
+                                wishlist(ele._id)
+                                    handleToggle()
+                               }} />}
+                              
+
+                               
+
+                        
+                        </span>{" "}
+                        
+                      </div>
+                    </div>  {" "}   <button  className="super_btn" > ₹ {ele.price}</button>
                       </div>
                     </div>
                    
                       <div className="row">
                         {" "}
-                        <div className="col"> <button  align="left" style={btn_third}> <img src={connection} alt="" /> Connect</button></div>
-                        <div className="col"> <button align="right" style={btn_two} onClick={() => {
+                        <div className="col"> <button  align="left" className="connect"> <img src={connection} alt="" /> Connect</button></div>
+                        <div className="col"> <button align="right" className="listbtnlist" onClick={() => {
       history.push(`/ProductPage/${ele._id}`)
-  } }> <img src={list} alt="" /> List</button></div>
+  } }> <img src={list} alt="" /> List</button>
+ 
+  </div>
+  <div><span > <button className="discount" > + Queue </button> </span>{" "} </div>
                        
-                        <div className="col">
-                        
-                        
-                        
-                      </div>
                       </div>
 
 

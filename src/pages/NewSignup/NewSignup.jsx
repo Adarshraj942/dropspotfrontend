@@ -68,18 +68,25 @@ const NewSignup = () => {
   return (
     <>
     <Navbar />
-    <br />
-    <br />
+    
     <div >
       
-            <div className='flex-containersign' style={{backgroundColor:'rgba(255, 214, 0, 1)',paddingTop:'40px',paddingBottom:'40px',borderTopLeftRadius:'20px',borderTopRightRadius:'20px'}}>
+            <div className='flex-containersign' style={{backgroundColor:'rgba(255, 214, 0, 1)',paddingTop:'40px',borderTopLeftRadius:'20px',borderTopRightRadius:'20px'}}>
               
                 <div className='flex-leftsign'>
-                <div align="center"><h1 style={{paddingTop:'20px',paddingBottom:'40px',fontSize:'25px',fontWeight:'800px'}}>Sign up to Drop your product to your store  spot</h1></div> 
-                    <div className='contsiner' style={{backgroundColor:'white',borderRadius:'20px',width:'500px',boxShadow:'4px 4px 2px 2px dimgrey '}}>
+                <div style={{marginBottom:'40px'}}>
+                          <button style={{width:"100px"}}  className='backbtn' onClick={()=>{
+                            history.push("/")
+                          }} > Back</button>
+                          </div>
+
+                    <div className='contsiner' style={{backgroundColor:'white',borderRadius:'20px',width:'500px',  boxShadow:"0px 4px 4px rgba(0, 0, 0, 0.15)" }}>
+                   
                         <form  align="center" action="" onSubmit={handleSubmit}>
+                         
                             <div >
-                                <div ><label htmlFor="" style={{marginTop:'20px'}}>Email</label></div>
+                              
+                                <div className='formlabel' ><label htmlFor="" style={{marginTop:'20px'}}>Email</label></div>
                                 <div><input
                                 placeholder="Enter Your Email"
                                 type="email"
@@ -89,7 +96,7 @@ const NewSignup = () => {
                                     className='inputbox' /></div>
                             </div>
                             <div >
-                            <div><label htmlFor="" style={{marginTop:'20px'}}>Password</label></div>
+                            <div className='formlabel'><label htmlFor="" style={{marginTop:'20px'}}>Password</label></div>
                             <div><input  type="password "
                             placeholder="Enter Your password"
                             name="password"
@@ -98,7 +105,7 @@ const NewSignup = () => {
                             className='inputbox' /></div>
                             </div>
                             <div >
-                            <div><label htmlFor="" style={{marginTop:'20px'}}>Confirm Password</label></div>
+                            <div className='formlabel'><label htmlFor="" style={{marginTop:'20px'}}>Confirm Password</label></div>
                             <div><input type="password " 
                             name="confirmpass"
                             placeholder="Enter Your Confirm Password"
@@ -107,7 +114,7 @@ const NewSignup = () => {
                             className='inputbox' /></div>
                             </div>
                             <div >
-                            <div><label htmlFor="" style={{marginTop:'20px'}}>Account Type</label></div>
+                            <div className='formlabel'><label htmlFor="" style={{marginTop:'20px'}}>Account Type</label></div>
                             <div>
                                 <select className='inputbox' name="" id="">
                                     <option value="">seller</option>
@@ -116,8 +123,8 @@ const NewSignup = () => {
                             </div>
                             </div>
                             <div >
-                            <div><label htmlFor="" style={{marginTop:'20px'}} >Invitation code</label></div>
-                            <div><input type="text" className='inputbox' placeholder='Enter Invitation code' /></div>
+                      
+
                             </div>
                             <div style={{marginTop:'20px'}}><p><input type="checkbox"  className='checkbox-roundchecked'   
                     name="privacyPolicy"
@@ -143,7 +150,12 @@ const NewSignup = () => {
                     </div>
                 </div>
                 <ToastContainer />
-                <div className='flex-rightsign' style={{marginTop:'300px'}}><img src={smart} alt="" /></div>
+                <div className='flex-rightsign'  >
+                <div align="center"><h1 style={{paddingTop:'20px',paddingBottom:'40px',fontWeight:'800px',textShadow:"0px 4px 4px rgba(0, 0, 0, 0.15)"}}>Sign Up To Drop Your Product <br /> To Your Store Spot</h1></div> 
+                <div align="center"  >
+                  <div><img  src={smart}  alt="" /></div>
+                  </div>  
+                  </div>
             </div>
         <Footer />
       

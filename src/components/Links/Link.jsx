@@ -13,7 +13,7 @@ const conatiner={
     width:'560px',
     color:'white',
     borderRadius:'20px',
-    boxShadow:'2px 2px  3px whitesmoke',
+    boxShadow:"0px 4px 4px rgba(0, 0, 0, 0.15)" ,
     padding:'10px',
     
     
@@ -31,15 +31,15 @@ function Link() {
   return (
     <>
     <div id="secondcomtainercard" className='conatiner-fluid' style={secondcontainer}>
-    <div align="center" className='container' style={conatiner}><h3 style={{color:'rgba(0, 0, 0, 1)',FontFamily:'Poppins',fontSize:'20.31px',lineHeight:'22.39px'}}>Recommended Products for E-commerce Platform</h3></div>
+    <div align="center" className='container' style={conatiner}><h3 style={{color:'rgba(0, 0, 0, 1)',FontFamily:'Poppins',fontSize:'20.31px',lineHeight:'22.39px'}}>Recommended Products For E-commerce Platform</h3></div>
     <div>
-    <div className="container">
-    <div className="row" style={row}>
-    <div className="col"><a href=""><img src={shopify} alt="" /></a></div>
+    <div align="center"  className="container">
+    <div align="center" className="row" style={row}>
+    <div className="col-3"><a href=""><img src={shopify} alt="" /></a></div>
 
-    <div className="col"><a href=""><img src={commerce} alt="" /></a></div>
-    <div className="col"><a href=""><img src={ebay} alt="" /></a></div>
-    <div className="col"><a href=""><img src={etsy} alt="" /></a></div>
+    <div className="col-3"><a href=""><img src={commerce} alt="" /></a></div>
+    <div className="col-3"><a href=""><img src={ebay} alt="" /></a></div>
+    <div className="col-3"><a href=""><img src={etsy} alt="" /></a></div>
     
   </div>
 </div>

@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Papa from 'papaparse';
 import { uploadCsv } from '../../Api/ProductRequest';
+import { color } from '@mui/system';
 function Sorchingform() {
   const serverPublic=process.env.REACT_APP_PUBLIC_FOLDER
   const loading =useSelector((state)=>state.postReducer.uplading)
@@ -26,6 +27,9 @@ function Sorchingform() {
   const weight=useRef()
   const category=useRef()
   const subCategory=useRef()
+  const maxprice=useRef()
+  const color=useRef()
+  const Material=useRef()
   const onImageChange=(event)=>{
       if(event.target.files && event.target.files[0]){
           let img=event.target.files[0];
@@ -73,6 +77,9 @@ function Sorchingform() {
           sku:skuId.current.value,
           category:category.current.value,
           subCategory:subCategory.current.value,
+          color:color.current.value,
+          maxprice:maxprice.current.value,
+          Material:Material.current.value,
           image0:null,
           image1:null,
           image2:null,
@@ -129,6 +136,9 @@ console.log(newPost);
       skuId.current.value=null;
       category.current.value=null;
       subCategory.current.value=null;
+      maxprice.current.value=null;
+      color.current.value=null;
+      Material.current.value=null;
       toast.success("Product added successfully")
   }
 
@@ -195,6 +205,17 @@ console.log(newPost);
               </select> */}
             </span> 
           </h6>
+          <h6><label className="labelstyle">Material</label>
+            <span>
+              <input type="text" className='selectbox' ref={Material} required />
+              {/* <select className='selectbox' name="#">
+                <option value="#">Select</option>
+                <option value="#">#link1</option>
+                <option value="#">link2</option>
+                <option value="#">#link3</option>
+              </select> */}
+            </span> 
+          </h6>
 
           <h6><label className="labelstyle">Category</label>
             <span>
@@ -216,7 +237,17 @@ console.log(newPost);
               </select>
             </span> 
           </h6>
-
+          <h6><label className="labelstyle">Color</label>
+            <span>
+            <input type="text" className='usdselecbox' ref={color} required />
+              {/* <select className='usdselecbox' name="#" >
+                <option value="#">Usd</option>
+                <option value="#">#link1</option>
+                <option value="#">link2</option>
+                <option value="#">#link3</option>
+              </select> */}
+            </span>
+          </h6>
           <h6><label className="labelstyle">Product discription</label>
             <span>
               <input type="text" className='selectbox' ref={descrip} required />
@@ -295,6 +326,17 @@ console.log(newPost);
           <h6><label className="labelstyle">Target Price</label>
             <span>
             <input type="text" className='usdselecbox' ref={price} required />
+              {/* <select className='usdselecbox' name="#" >
+                <option value="#">Usd</option>
+                <option value="#">#link1</option>
+                <option value="#">link2</option>
+                <option value="#">#link3</option>
+              </select> */}
+            </span>
+          </h6>
+          <h6><label className="labelstyle">Maximum Price</label>
+            <span>
+            <input type="text" className='usdselecbox' ref={maxprice} required />
               {/* <select className='usdselecbox' name="#" >
                 <option value="#">Usd</option>
                 <option value="#">#link1</option>

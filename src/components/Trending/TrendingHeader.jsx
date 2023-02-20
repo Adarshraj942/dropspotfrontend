@@ -4,6 +4,7 @@ const header={
     justifyContent:'center',
     paddingTop:'20px',
     paddingBottom:'20px',
+
    
 
 }
@@ -11,7 +12,7 @@ function TrendingHeader() {
   return (
     <div id="header" >
        <div  style={header}>
-      <h3 align='center' >Trending Products</h3>
+      <h2 align='center' >Trending Products</h2>
     </div>
     </div>
    

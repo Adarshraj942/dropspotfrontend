@@ -32,7 +32,7 @@ import ShoppingCard from '../components/ShoppingCard/ShoppingCard';
 
 const Home = () => {
   const [category, setCategory] = useState("");
-  const [products, setProduct] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  const [products, setProduct] = useState([1, 2, 3, 4, 5]);
 
 
 
@@ -43,7 +43,7 @@ const Home = () => {
   return (
     <div>
     <Navbar />
-      <br />
+    
       <MediaNavbar />
       <Shopnavbar />
     
@@ -58,7 +58,7 @@ const Home = () => {
       <br />
      
       <Mediabuttonbanner />
-      <br />
+     
       <MediaCatogryButton />
       <Link />
       <br />

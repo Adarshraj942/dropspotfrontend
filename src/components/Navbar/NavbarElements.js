@@ -11,13 +11,22 @@ export const Nav = styled.nav`
   color:black;
   z-index: 12;
   border-radius:20px;
-  box-shadow:2px 3px 5px whitesmoke;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &:hover {
+   
+  
+    background:rgba(255, 255, 255, 1);
+  }
 
   text-decoration:none;
   /* Third Nav */
   /* justify-content: flex-start; */
   @media screen and (max-width: 768px) {
     display: none;
+  }
+
+  a:hover{
+    background-color:rgba(255, 255, 255, 1);
   }
 `;
   
@@ -35,10 +44,11 @@ color:black;
   padding: 0 1.5rem;
   height: 100%;
   cursor: pointer;
+ 
 
-  &.active {
-    color: #000000;
-  }
+ 
+
+  
 `;
   
 export const Bars = styled(FaBars)`
@@ -53,6 +63,7 @@ export const Bars = styled(FaBars)`
     transform: translate(-100%, 75%);
     font-size: 1.8rem;
     cursor: pointer;
+   
   }
 `;
   
@@ -65,6 +76,7 @@ export const NavMenu = styled.div`
   /* Third Nav */
   margin-left:10%;
   width:100px;
+
   white-space: nowrap; */
   @media screen and (max-width: 768px) {
     display: none;
@@ -74,6 +86,7 @@ export const NavMenu = styled.div`
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
+ 
   margin-right: 24px;
   /* Third Nav */
   /* justify-content: flex-end;
@@ -98,7 +111,7 @@ export const NavBtnLink = styled(Link)`
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
-    color: #808080;
+    color: green;
   }
 `;
 

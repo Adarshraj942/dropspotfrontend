@@ -9,8 +9,10 @@ import heart from '../../assets/heart.png'
 import rebort from '../../assets/rebort.png'
 import './ProductPage.css'
 import swal from 'sweetalert'
+import '../../components/Footer/Footer'
 import avatar from '../../assets/avatar.png'
 import { getProduct } from '../../Api/ProductRequest'
+import Footer from '../../components/Footer/Footer'
 const listings={
     display: 'flex',
     listStyleType:'none',
@@ -99,13 +101,13 @@ function ProductPage() {
   return (
     <>
     <Navbar />
-    <br />
+  
     <Shopnavbar />
     <div>
       
       <div className="container-fluid">
         <div className="col-lg-10 border p-3 main-section bg-white">
-        <h5 style={heading}>Women ‘s Clothing / Tops & Sets / {post.name}  </h5> 
+        <h5 style={heading}>{post.category} / {post.subCategory} / {post.name}  </h5> 
           <div className="row m-0">
 
            
@@ -147,12 +149,12 @@ function ProductPage() {
                   
                     <span style={{fontWeight:'400',fontSize:'22px',lineHeight:'40px',fontStyle:'Poppins',color:'rgba(0,0,0,1)'}}>{post.desc}</span>
                     <div className="col-lg-12" style={{marginTop:'20px',paddingBottom:'20px'}} >
-                    <div className="colors" ><h6>Color</h6>
-                        <div className="color" style={{backgroundColor: 'rgba(219, 30, 30, 1)'}} data-hex="#e1e851" />
+                    <div className="colors" ><h6>Color :  {post.color}</h6>
+                        {/* <div className="color" style={{backgroundColor: 'rgba(219, 30, 30, 1)'}} data-hex="#e1e851" />
                         <div className="color" style={{backgroundColor: 'rgba(255, 101, 166, 1)'}} data-hex="#8cd147" />
                         <div className="color" style={{backgroundColor: 'rgba(33, 33, 33, 1)'}} data-hex="#4a9ccf" />
                         <div className="color" style={{backgroundColor: 'rgba(16, 11, 255, 1)'}} data-hex="#661f45" />
-                        
+                         */}
                     </div>
                   </div>
                     <hr className="m-0 pt-2 mt-2" />
@@ -161,15 +163,21 @@ function ProductPage() {
                     <div className="col"> 
                     <li style={{fontSize:'20px',lineHeight:'43.94px',fontWeight:'400',fontStyle:'Poppins',listStyle:'inherit'}}>Shipping Fee:</li>
                     <li style={{fontSize:'20px',lineHeight:'43.94px',fontWeight:'400',fontStyle:'Poppins',listStyle:'inherit'}}>Service Fee</li>
-                    <li style={{fontSize:'20px',lineHeight:'43.94px',fontWeight:'400',fontStyle:'Poppins',listStyle:'inherit'}}>Quantity:<span><input type="number" className="form-control text-center " defaultValue={1} style={{width: '30px',height:'10px'}} /></span></li>
-                    <li style={{fontSize:'20px',lineHeight:'43.94px',fontWeight:'400',fontStyle:'Poppins',listStyle:'inherit'}}>SKU:</li></div>
+                    <li style={{fontSize:'20px',lineHeight:'43.94px',fontWeight:'400',fontStyle:'Poppins',listStyle:'inherit'}}>Quantity : {post.quantity ?post.quantity:"nil"}<span><input type="number" className="form-control text-center " defaultValue={1} style={{width: '100px',height:'40px'}} /></span></li>
+                    <li style={{fontSize:'20px',lineHeight:'43.94px',fontWeight:'400',fontStyle:'Poppins',listStyle:'inherit'}}>SKU : {post.sku?post.sku:"nil"}</li>
+                    <li style={{fontSize:'20px',lineHeight:'43.94px',fontWeight:'400',fontStyle:'Poppins',listStyle:'inherit'}}>Category : {post.category?post.category:"nil"}</li>
+                    <li style={{fontSize:'20px',lineHeight:'43.94px',fontWeight:'400',fontStyle:'Poppins',listStyle:'inherit'}}>Subcategory : {post.subCategory?post.subCategory:"nil"}</li>
+                    <li style={{fontSize:'20px',lineHeight:'43.94px',fontWeight:'400',fontStyle:'Poppins',listStyle:'inherit'}}>Material: {post.Material?post.Material:"nil"}</li>
+                    <li style={{fontSize:'20px',lineHeight:'43.94px',fontWeight:'400',fontStyle:'Poppins',listStyle:'inherit'}}>weight: {post.weight?post.weight:"nil"}</li>
+                    <li style={{fontSize:'20px',lineHeight:'43.94px',fontWeight:'400',fontStyle:'Poppins',listStyle:'inherit'}}>Attributes :{post.height?post.height:"nil"}, {post.width?post.width:"nil"}, {post.deapth?post.deapth:"nil"}</li></div>
+                   
                     <div className="col">
                     <div class="row">
-                        <div class="col"><img src={avatar} style={{width:"3rem"}} alt="Avatar" class="avatar" /></div>
+                        {/* <div class="col"><img src={avatar} style={{width:"3rem"}} alt="Avatar" class="avatar" /></div>
                         <div class="col-6 col-sm-4"><button style={vickybtn}>Vicky</button> </div>
                         <div class="col-6 col-sm-4"> <button style={vickybtn}>China</button></div>
                         
-                       
+                        */}
                         
 
                       
@@ -179,7 +187,7 @@ function ProductPage() {
                        
                       </div>
                       <div className="container" style={{width:'350px',paddingRight:'20px'}}>
-                      <form action="">
+                      {/* <form action="">
                         <label htmlFor="" style={label} >Shipping from <span style={{marginLeft:'20px'}} ><input style={inputtext} type="text" /></span></label>
                         <label htmlFor="" style={label} >Inventory<span style={{marginLeft:'60px'}}><input  style={inputtext}type="text" /></span></label>
                         <label htmlFor="" style={label} >Plateform <span style={{marginLeft:'50px'}}><input style={inputtext} type="text" /></span></label>
@@ -187,7 +195,7 @@ function ProductPage() {
                         <label htmlFor="" style={label} >Shipping Method <span style={{marginLeft:'10px'}}><input style={inputtext} type="text" /></span></label>
                         <label htmlFor="" style={label} >Estimated Delivery Time : kmlkm</label>
                         <label htmlFor="" style={label} >Tracking Information :kjknkn</label>
-                      </form>
+                      </form> */}
                       </div>
 
                       </div>
@@ -195,7 +203,7 @@ function ProductPage() {
                
                   
                   <div className="col-lg-12">
-                    <button style={{backgroundColor:'#000000',borderRadius:'30px',color:'white',width:'250px',height:'50px'}}>Product Price:${post.price}</button>
+                    <button style={{backgroundColor:'#000000',borderRadius:'30px',color:'white',width:'250px',height:'50px'}}>Product Price:  ₹ {post.price} - {post.maxprice?post.maxprice:"nil"}</button>
                     <div className="col-lg-12 mt-3">
                       <div className="col-lg-12" style={listings} >
                         <button style={btnbuy}>Buy Now</button>
@@ -288,6 +296,7 @@ function ProductPage() {
         </div>
       </div>
     </div>
+    <Footer />
 
 
     </>

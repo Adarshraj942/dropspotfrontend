@@ -82,15 +82,22 @@ const NewLogin = () => {
   <div>
     <Navbar />
     <div className='flex-conatiner300'  >
+    <div style={{paddingTop:'40px'}}>
+                          <button style={{width:"100px"}}  className='backbtn' onClick={()=>{
+                            history.push("/")
+                          }} > Back</button>
+                          </div>
      <div className='flex-item-left300' >
-        <div align="center" style={{paddingTop:'40px',paddingBottom:'20px'}}><h1>Login</h1></div>
-            <div className='containerform'>
+      
+        <div align="center" style={{paddingTop:'40px',paddingBottom:'40px',textShadow:"0px 4px 4px rgba(0, 0, 0, 0.15)"}}>
+          <h1>Login</h1></div>
+        
+            <div className='containerform' style={{boxShadow:"0px 4px 4px rgba(0, 0, 0, 0.15)"}}>
+           
             <form  align="center" action=""  onSubmit={handleSubmit} >
                 <div  >
-                <button style={{width:"50px"}}  className='submitbtn' onClick={()=>{
-                  history.push("/")
-                }} > Back</button>
-                    <div ><label htmlFor="" style={{marginTop:'20px'}}>Email</label></div>
+               
+                    <div style={{textAlign:'left',paddingLeft:'70px'}} ><label htmlFor="" style={{marginTop:'20px'}}>Email</label></div>
                                         <div>
                                           <input
                                         placeholder="Enter Your Email"
@@ -108,7 +115,7 @@ const NewLogin = () => {
             )}
                     </div>
                     <div >
-                                    <div><label htmlFor="" style={{marginTop:'20px'}}>Password</label></div>
+                                    <div style={{textAlign:'left',paddingLeft:'70px'}}><label htmlFor="" style={{marginTop:'20px'}}>Password</label></div>
                                     <div><input  type="password "
                                     placeholder="Enter Your password"
                                     name="password"
@@ -125,14 +132,18 @@ const NewLogin = () => {
                             <div align="center" style={{marginTop:'30px'}}><div align="center" className='submitbtn'><button style={{backgroundColor:'transparent',borderColor:'transparent',}}>Login</button></div></div>
                     </div>
                             <div style={{paddingTop:'20px'}}> <input type="checkbox"  name="submit_form" id="submit_form" value="yes" />
-                        <label for="send_newsletter" style={{color:'black'}}> Remember Me</label><span style={{float:'right',paddingRight:'20px'}}>Forgot Your Password?</span></div>
-        
+                        <label for="send_newsletter" style={{color:'black'}}> Remember Me</label><span style={{float:'right',paddingRight:'70px'}}>Forgot Your Password?</span></div>
+                        <span onClick={()=>{
+                          history.push("/verifymobile")
+                        }}  style={{color:"orange",poiner:"cursor"}}>Login with OTP</span>
                             <div className="or-container">
+                           
                                 <div className="line-separator" />
+                               
                                 <div className="or-label">or</div>
                                 <div className="line-separator" />
                             </div>
-                            <div  className="flex-container">
+                            <div  className="flex-container" style={{paddingBottom:'20px'}}>
                                 {/* <div  className="flex-left"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}><img align="center" src={googleicon} alt="" /></button></div> */}
                                 {/* <div  className="flex-right"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}><img  align="center" src={facebookicon} alt="" /></button></div> */}
                                 <GoogleOAuthProvider clientId="820965083830-suli7t5b5bul27109gngq9i9ks8fsv9e.apps.googleusercontent.com">

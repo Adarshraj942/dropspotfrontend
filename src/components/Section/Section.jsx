@@ -89,215 +89,146 @@ function Section() {
   
   return (
     <>
-      <div id="section">
-      <div className="container-fluid">
-        <div className="row">
-        <div className="col-md-3">
-        <div align="center" className="sidenav">
+
+     <div className="flex-conatainer" style={{display:'flex',justifyContent:'space-evenly',width:'100%'}}>
+      <div className="flex-item-left" style={{justifyContent:'left'}}>
+      <div align="center" className="sidenav">
         <div >
-            <div className="flexutemcenter" style={{backgroundColor:'#FFD600',padding:'10px',width:'300px',height:'50px',marginTop:'3px'}}>All Catogries</div>
+            <div className="flexutemcenter" style={{backgroundColor:'#FFD600',padding:'10px',height:'50px',marginTop:'3px'}}>All Catogries</div>
           </div>
            
         <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-            <div className="flexutemleft" style={{marginLeft:'40px'}}><img src={purse} alt="" /></div>
+            <div className="flexutemleft"><img src={purse} alt="" /></div>
             <div className="flexutemright" style={{marginLeft:'15px'}}>Bags and shoes</div>
           </div>
          </button>
         <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft"  style={{marginLeft:'40px'}}><img src={ring} alt="" /></div>
+          <div className="flexutemleft"  ><img src={ring} alt="" /></div>
             <div  className="flexutemright" style={{marginLeft:'15px'}}>Jewelory & Watches</div>
           </div>
          </button>
          <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'40px'}}><img src={tablet} alt="" /></div>
+          <div className="flexutemleft" ><img src={tablet} alt="" /></div>
             <div className="flexutemright" style={{marginLeft:'15px'}}>Hair,Beauty & Hair</div>
           </div>
          </button>
          <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'40px'}}><img src={dress} alt="" /></div>
+          <div className="flexutemleft" ><img src={dress} alt="" /></div>
             <div className="flexutemright" style={{marginLeft:'15px'}}>Women's Clothing</div>
           </div>
          </button>
          <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'40px'}}><img src={home} alt="" /></div>
+          <div className="flexutemleft" ><img src={home} alt="" /></div>
             <div className="flexutemright" style={{marginLeft:'15px'}}> Home,Garden & Furtinure</div>
           </div>
          </button>
          <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'40px'}}><img src={hat} alt="" /></div>
+          <div className="flexutemleft" ><img src={hat} alt="" /></div>
             <div className="flexutemright" style={{marginLeft:'15px'}}>Phone and Accessories</div>
           </div>
          </button>
          <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'40px'}}><img  src={sticks}alt="" /></div>
+          <div className="flexutemleft" ><img  src={sticks}alt="" /></div>
             <div className="flexutemright" style={{marginLeft:'15px'}}>Sports & Outdoors</div>
           </div>
          </button>
-         <button className="catogrybtns"   > 
-          <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'40px'}}><img  src={bike} alt="" /></div>
-            <div className="flexutemright" style={{marginLeft:'10px'}}>Automobiles & Motorcycle</div>
-          </div>
-         </button>
-         <button className="catogrybtns"   > 
-          <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'40px'}}><img  src={tablet} alt="" /></div>
-            <div className="flexutemright" style={{marginLeft:'10px'}}>Health,Beauty & Hair</div>
-          </div>
-         </button>
-         <button className="catogrybtns"   > 
-          <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'40px'}}><img  src={toy} alt="" /></div>
-            <div className="flexutemright" style={{marginLeft:'20px'}}>Toys, Kids & Babies</div>
-          </div>
-         </button>
-         <button className="catogrybtns"   > 
-          <div className="flexContainer" style={{display:'flex'}}>
-          <div className="flexutemleft" style={{marginLeft:'40px'}}><img  src={shirt} alt="" /></div>
-            <div className="flexutemright" style={{marginLeft:'20px'}}> Men's Clothing</div>
-          </div>
-         </button>
-         <button className="catogrybtns"   > 
-          <div className="flexContainer" style={{display:'flex'}}>
-            <div className="flexutemleft" style={{marginLeft:'40px'}}><img src={circuit} alt="" /></div>
-            <div className="flexutemright" style={{marginLeft:'20px'}}> Consumer Electronics</div>
-          </div>
-         </button>
-       
+         </div>
+
 
       </div>
-        </div>
-          <div className="col-md-3">
-            <div id="demo" className="carousel slide" data-ride="carousel">
-              <ul className="carousel-indicators">
-                <li
-                  data-target="#demo"
-                  data-slide-to="0"
-                  className="active"
-                  style={{color:"black"}}
-                ></li>
-                <li
-                  data-target="#demo"
-                  data-slide-to="1"
-                  style={{color:"black"}}
-                ></li>
-                <li
-                  data-target="#demo"
-                  data-slide-to="2"
-                  style={{color:"black"}}
-                ></li>
-                  <li
-                  data-target="#demo"
-                  data-slide-to="3"
-                  style={{color:"black"}}
-                ></li>
-                  <li
-                  data-target="#demo"
-                  data-slide-to="4"
-                  style={{color:"black"}}
-                ></li>
-                 <li
-                  data-target="#demo"
-                  data-slide-to="5"
-                  style={{color:"black"}}
-                ></li>
-              </ul>
-
-              <div className="carousel-inner" style={{width:"63rem"}}>
-                <div className="carousel-item active">
-                  <img src={ecomerce} alt="Los Angeles" />
-                </div>
-                <div className="carousel-item">
-                  <img src={ecomerce} alt="Chicago" />
-                </div>
-                <div className="carousel-item">
-                  <img src={ecomerce} alt="New York" />
-                </div>
-                <div className="carousel-item">
-                  <img src={ecomerce} alt="New York" />
-                </div>
-                <div className="carousel-item">
-                  <img src={ecomerce} alt="New York" />
-                </div>
-              </div>
-
-              <a
-                className="carousel-control-prev"
-                href="#demo"
-                data-slide="prev"
-              >
-                <span className="carousel-control-prev-icon"></span>
-              </a>
-              <a
-                className="carousel-control-next"
-                href="#demo"
-                data-slide="next"
-              >
-                <span className="carousel-control-next-icon"></span>
-              </a>
-            </div>
+      <div className="flex-item-center" style={{justifyContent:'center'}}>
+      <div id="myCarousel" className="carousel slide" data-ride="carousel">
+        {/* Indicators */}
+        <ol className="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to={0} className="active" />
+          <li data-target="#myCarousel" data-slide-to={1} />
+          <li data-target="#myCarousel" data-slide-to={2} />
+        </ol>
+        {/* Wrapper for slides */}
+        <div className="carousel-inner" style={{ boxShadow:" 0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'5px',height:'450px'}}>
+          <div className="item active">
+            <img src={ecomerce} alt="Los Angeles" style={{width: '100%'}} />
           </div>
-          <div  id="imagecol" className="col" style={{backgroundColor:'rgba(rgba(0, 0, 0, 0.15))',boxShadow:'4px 5px 8px whitesmoke',borderRadius:'20px',marginLeft:"15rem"}}>
-            <div className="col" >
-              <div align="center" className="row" style={{paddingTop:'20px',gap:'20px'}} >
-                <div className="col" >
-                  <img src={freestore} /><br />
-                  <div className="div" style={{}}>free Shipping</div>
-                </div> 
-                <div className="col" >
-                  <img src={freeshipping} /><br />
-                  <div className="div" >free Shipping</div>
-                </div>
-                <div className="w-100"></div><br />
-
-                <div className="col" >
-                  <img  src={acadamy} /><br />
-                  <div className="div" >free Shipping</div>
-                </div>
-                <div className="col">
-                  <img src={fullfillment} /><br />
-                  <div className="div" >free Shipping</div>
-                </div>
-                <br />
-                <div className="w-100"></div>
-                <div className="col">
-                  <img src={odm} /><br />
-                  <div className="div" >free Shipping</div>
-                </div>
-                <div className="col">
-                  <img src={video} /><br />
-                  <div className="div" >free Shipping</div>
-                </div>
-               
-              </div>
-              <br />
-              <div className="row" style={{borderRadius:'20px',outlineColor:'rgba(253, 231, 54, 1)',outline:'20px'}}>
-                <div className="box" style={box}>
-                </div>
-              </div>
-            </div>
+          <div className="item">
+            <img src={ecomerce} alt="Chicago" style={{width: '100%'}} />
           </div>
-         
-          {/* <div id="delivery" className="col">
-            <div className="row" style={{display:'flex'}}>
-              <div className="col" style={delivery}>Delivery Time</div>
-              <div className="col"><button style={shiiping}>Shipping calculation</button></div>
-            </div>
-            <div className="row">
-              <div className="col" style={order}>Order 155***267 placed by ***ch has been delivered for a period of 25 days from to .
-              </div>
-            </div>
-          </div> */}
+          <div className="item">
+            <img src={ecomerce} alt="New york" style={{width: '100%'}} />
+          </div>
         </div>
       </div>
-    </div>
+      </div>
+      <div className="flex-item-right" style={{justifyContent:'right'}}>
+      <div className="container" style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'5px',padding:'10px 10px 10px 10px'}} >
+        <div align="center" style={{margin:'5px 5px 5px 5px'}}><h3>How we work</h3></div>
+      <div className="row"  >
+        <div className="col-6" >
+          <div align="center">
+          <div><img src={freestore} alt="" /></div>
+          <div><b>Find store</b></div>
+          </div>
+          
+        
+        </div>
+        <div className="col-6">
+        <div align="center">
+          <div><img src={freeshipping} alt="" /></div>
+          <div><b>Fast Shipping</b></div>
+        </div>
+        </div>
+       </div>
+       <div className="row" >
+        <div className="col-6">
+        <div align="center">
+          <div> <img src={acadamy} alt="" /></div>
+          <div><b>Order Tracking</b></div>
+          </div>
+        </div>
+        <div className="col-6">
+        <div align="center">
+          <div><img src={fullfillment} alt="" /></div>
+          <div><b>24hrs Fullfillment</b></div>
+        </div>
+         </div>
+       </div>
+       <div className="row" >
+        <div className="col-6">
+        <div align="center">
+          <div><img src={odm} alt="" /></div>
+          <div><b>Manage Order</b></div>
+        </div>
+        </div>
+        <div className="col-6">
+        <div align="center">
+          <div><img src={video} alt="" /></div>
+          <div><b>Request Material</b></div>
+        </div>
+          </div>
+       </div>
+      </div>
+
+      </div>
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
     
   
    

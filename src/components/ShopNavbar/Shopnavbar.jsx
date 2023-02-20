@@ -16,8 +16,8 @@ function Shopnavbar() {
 
     <div className="navbarContainer">
     <ul>
-      <li className='listitem'><img style={{height:'30px'}} src={logo} alt="" /></li>
-      <li style={{listStyle:'none',paddingTop:'22px'}}>  
+      <li className='listitemone'><img style={{height:'60px'}} src={logo} alt="" /></li>
+      <li style={{listStyle:'none',paddingTop:'12px'}}>  
         <div className="input-group">
           <div className="form-outline" style={{display:'flex',height:'10px',listStyle:'none'}}>
           <form action="">
@@ -34,22 +34,24 @@ function Shopnavbar() {
           </div>
         </div>
       </li>
-      <li className='listitem'> <span><button onClick={()=>{history.push('/PurchaseCart')}}  style={{width:'50px',backgroundColor:'white',borderRadius:'20px',borderColor:'transparent'}}><i data-count="3" className="fa fa-shopping-cart " /></button></span><a href><span classname="glyphicon glyphicon-shopping-cart"> Cart<span classname="badge" /></span></a>
+      <li className='listitem'> <span><i data-count="3" className="fa fa-shopping-cart " /></span><a href><span classname="glyphicon glyphicon-shopping-cart"> Cart<span classname="badge" /></span></a>
       </li>
-      <li className='listitem'> Source more<span classname="badge" />
+      
+      <li className='listitem' > Source more<span classname="badge" />
       </li>
       <li className='listitem'><span><img src={sorce} style={{width:'auto',height:'auto',borderRadius:'20px',borderColor:'transparent'}} /></span> Queue<span classname="badge" /></li>
       <li className='listitem'><span><img src={service}  style={{width:'auto',height:'auto',borderRadius:'20px',borderColor:'transparent'}} /></span><div className="dropdown">
-          <button className="dropbtn">Settings</button>
+          <button className="dropbtn">Tools</button>
           <div className="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <a href="#">Shipping Calculator</a>
+            <a href="#">Track Order</a>
+           
           </div>
           <span><i class='fas fa-chevron-circle-down'></i></span>
         </div>
         
         </li>
+      
     </ul>
   </div>
   )
