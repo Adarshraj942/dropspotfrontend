@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className='links'>
         <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false " style={{backgroundColor:'white'}}>
          <span style={{paddingRight:'10px'}}><img src={lang} style={{height:'20px',textDecoration:'none'}} alt="" /></span>Language</a>
-        <div className="dropdown-menu" aria-labelledby="dropdown09">
+        <div className="dropdown-menu" aria-labelledby="dropdown09"  style={{backgroundColor:'#f9f9f9',width:'190px',boxShadow: " 0px 8px 16px 0px rgba(0,0,0,0.2);",borderRadius:'5px'}}>
           <a className="dropdown-item" href="#fr"> Hindi</a>
           <a className="dropdown-item" href="#it" >English</a>
 
@@ -46,7 +46,7 @@ const Navbar = () => {
         <div>
         <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false " style={{backgroundColor:'white',textDecoration:'none'}}>
          <span style={{paddingRight:'10px',textDecoration:'none'}}><i class="fa fa-check-circle"></i></span>Autherization</a>
-        <div className="dropdown-menu" aria-labelledby="dropdown09" >
+        <div className="dropdown-menu" aria-labelledby="dropdown09" style={{backgroundColor:'#f9f9f9',width:'150px',boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2);",borderRadius:'5px'}} >
           <a className="dropdown-item" href="#fr"><img src={droptik} alt="" /></a>
           <a className="dropdown-item" href="#it"><img src={dropship} alt="" /></a>
           <a className="dropdown-item" href="#it"><img src={dropwelmart} alt="" /></a>

@@ -4,6 +4,7 @@ import Adminnavbar from '../Adminnavbar/Adminnavbar'
 import Sidebar from '../Sidebar/Sidebar'
 import Sourchingform from '../Sorchingform/Sorchingform'
 
+
 function Sourcingpage() {
   const history=useHistory()
   useEffect(() => {
@@ -22,8 +23,10 @@ function Sourcingpage() {
   <Adminnavbar />
  <div className='container-fluid'>
  <div className='row'>
-  <div className='col-2'><Sidebar /></div>
-  <div className='col-10'><Sourchingform /></div>
+  <div className='col-2' style={{backgroundColor:'#32333A'}}><Sidebar /></div>
+  <div className='col-10'>
+ 
+    <Sourchingform /></div>
  </div>
  </div>
     

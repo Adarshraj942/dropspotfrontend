@@ -81,6 +81,7 @@ function Section() {
     marginTop:'10px' 
   }
     
+  document.body.style = 'background: #FFFEF6;'
 
 
   // 
@@ -90,12 +91,13 @@ function Section() {
   return (
     <>
 
-     <div className="flex-conatainer" style={{display:'flex',justifyContent:'space-evenly',width:'100%'}}>
+     <div className="flex-conatainer" style={{display:'flex',justifyContent:'space-evenly',width:'100%',padding:'20px'}}>
       <div className="flex-item-left" style={{justifyContent:'left'}}>
-      <div align="center" className="sidenav">
-        <div >
-            <div className="flexutemcenter" style={{backgroundColor:'#FFD600',padding:'10px',height:'50px',marginTop:'3px'}}>All Catogries</div>
+      <div >
+            <div align="center" className="flexutemcenter" style={{backgroundColor:'#FFD600',padding:'10px',height:'50px',marginTop:'3px'}}>All Catogries</div>
           </div>
+      <div align="center" className="sidenav" id="scrollbar" style={{overflowY:'scroll',height:'400px'}}>
+       
            
         <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
@@ -112,7 +114,7 @@ function Section() {
          <button className="catogrybtns"   > 
           <div className="flexContainer" style={{display:'flex'}}>
           <div className="flexutemleft" ><img src={tablet} alt="" /></div>
-            <div className="flexutemright" style={{marginLeft:'15px'}}>Hair,Beauty & Hair</div>
+            <div className="flexutemright" style={{marginLeft:'15px'}}>Beauty & Hair</div>
           </div>
          </button>
          <button className="catogrybtns"   > 
@@ -139,6 +141,24 @@ function Section() {
             <div className="flexutemright" style={{marginLeft:'15px'}}>Sports & Outdoors</div>
           </div>
          </button>
+         <button className="catogrybtns"   > 
+          <div className="flexContainer" style={{display:'flex'}}>
+          <div className="flexutemleft" ><img  src={shirt}alt="" /></div>
+            <div className="flexutemright" style={{marginLeft:'15px'}}>Men's Clothing</div>
+          </div>
+         </button>
+         <button className="catogrybtns"   > 
+          <div className="flexContainer" style={{display:'flex'}}>
+          <div className="flexutemleft" ><img  src={circuit}alt="" /></div>
+            <div className="flexutemright" style={{marginLeft:'15px'}}>Consumer Electronics</div>
+          </div>
+         </button>
+         <button className="catogrybtns"   > 
+          <div className="flexContainer" style={{display:'flex'}}>
+          <div className="flexutemleft" ><img  src={home}alt="" /></div>
+            <div className="flexutemright" style={{marginLeft:'15px'}}>Home improvement</div>
+          </div>
+         </button>
          </div>
 
 
@@ -152,7 +172,7 @@ function Section() {
           <li data-target="#myCarousel" data-slide-to={2} />
         </ol>
         {/* Wrapper for slides */}
-        <div className="carousel-inner" style={{ boxShadow:" 0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'5px',height:'450px'}}>
+        <div className="carousel-inner" id="carasouelsection" style={{height:'450px'}}>
           <div className="item active">
             <img src={ecomerce} alt="Los Angeles" style={{width: '100%'}} />
           </div>
@@ -166,7 +186,7 @@ function Section() {
       </div>
       </div>
       <div className="flex-item-right" style={{justifyContent:'right'}}>
-      <div className="container" style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'5px',padding:'10px 10px 10px 10px'}} >
+      <div className="container" id="carasouelsection" style={{padding:'10px 10px 10px 10px'}} >
         <div align="center" style={{margin:'5px 5px 5px 5px'}}><h3>How we work</h3></div>
       <div className="row"  >
         <div className="col-6" >

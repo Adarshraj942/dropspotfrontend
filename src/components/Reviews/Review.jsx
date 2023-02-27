@@ -45,8 +45,8 @@ export default class SimpleSlider extends Component {
          <div align="center" className="gridcontainer" style={gridcontainer}>
          <div align="center" className="grid-item"><img  src={Review} alt="" /></div>
            <div className="grid-item" >                           
-            <div class="review-box">
-                 <img className="cli-img" src={logo} alt="" />
+            <div class="review-box"   >
+                 <img id="carasouelsection" className="cli-img" src={logo} alt="" />
                    <span className="review-info"></span>
                    <span className="review-date">18 December 2018</span>
                      <div className="review-rating" >
@@ -67,7 +67,7 @@ export default class SimpleSlider extends Component {
        <div className="gridcontainer" style={gridcontainer}>
          <div className="grid-item"><img  src={Review} alt="" /></div>
            <div className="grid-item">                            <div class="review-box">
-                           <img className="cli-img" src={logo} alt="" />
+                           <img id="carasouelsection" className="cli-img" src={logo} alt="" />
                            <span className="review-info"></span>
                            <span className="review-date">18 December 2018</span>
                            <div className="review-rating">
@@ -88,7 +88,7 @@ export default class SimpleSlider extends Component {
        <div className="gridcontainer" style={gridcontainer}>
          <div className="grid-item"><img  src={Review} alt="" /></div>
            <div className="grid-item">                            <div class="review-box">
-                           <img className="cli-img" src={logo} alt="" />
+                           <img id="carasouelsection" className="cli-img" src={logo} alt="" />
                            <span className="review-info"></span>
                            <span className="review-date">18 December 2018</span>
                            <div className="review-rating">
@@ -109,7 +109,7 @@ export default class SimpleSlider extends Component {
        <div className="gridcontainer" style={gridcontainer}>
          <div className="grid-item"><img  src={Review} alt="" /></div>
            <div className="grid-item">                            <div class="review-box">
-                           <img className="cli-img" src={logo} alt="" />
+                           <img id="carasouelsection" className="cli-img" src={logo} alt="" />
                            <span className="review-info"></span>
                            <span className="review-date">18 December 2018</span>
                            <div className="review-rating">
@@ -130,7 +130,7 @@ export default class SimpleSlider extends Component {
        <div className="gridcontainer" style={gridcontainer}>
          <div className="grid-item"><img  src={Review} alt="" /></div>
            <div className="grid-item">                            <div class="review-box">
-                           <img className="cli-img" src={logo} alt="" />
+                           <img id="carasouelsection" className="cli-img" src={logo} alt="" />
                            <span className="review-info"></span>
                            <span className="review-date">18 December 2018</span>
                            <div className="review-rating">
@@ -151,7 +151,7 @@ export default class SimpleSlider extends Component {
        <div className="gridcontainer" style={gridcontainer}>
          <div className="grid-item"><img  src={Review} alt="" /></div>
            <div className="grid-item">                            <div class="review-box">
-                           <img className="cli-img" src={logo} alt="" />
+                           <img id="carasouelsection" className="cli-img" src={logo} alt="" />
                            <span className="review-info"></span>
                            <span className="review-date">18 December 2018</span>
                            <div className="review-rating">

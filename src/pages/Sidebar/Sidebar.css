@@ -7,5 +7,24 @@
     width: 150px;
     height: 50px;
     border-radius: 5px;
+    margin: 10px 0px 5px 0px;
+    font-weight: 800;
 }
+
+ul{
+    list-style-type:none;
+}
+
+.nav-item .nav-item button{
+    width:120px;
+font-size: 15px;
+font-weight: 500;
+    align-items: center;
+ 
+}
+
+
+
+
+
 

@@ -1,5 +1,5 @@
-.selectbox{
-    width: 500px;
+.inputfield{
+    width: 1000px;
     height: 50px;
     border-radius: 86px;
     border-color: transparent;
@@ -8,7 +8,7 @@
     font-size: 15px;
     padding-left: 20px;
     font-style: 'Poppins';
-    margin-left: 30px;
+   
 }
 .usdselecbox{
     width: 300px;
@@ -51,20 +51,19 @@
     font:'Poppins';
     line-height: 30px;
    color: rgba(0, 0, 0, 1);
-   margin-left: 10px;
+   margin-left: 20px;
+
 }
 
-.clearbtn{
-    background-color:rgba(231, 231, 231, 1);
-    width: 200px;
-    height: 54px;
-    border-radius: 18px;
-    border-color: transparent;
-    color: rgba(0, 0, 0, 1);
-    font-size: 15px;
+.Checklabelyes{
+    font-size: 20px;
+    font:'Poppins';
     line-height: 30px;
-    font-weight: 400;
+   color: rgba(0, 0, 0, 1); 
+   margin-right: 20px;
 }
+
+
 .subbtn{
     background-color:rgba(253, 227, 26, 1);
     width: 200px;
@@ -84,3 +83,118 @@
     margin-top: 20px;
     text-align: center;
 }
+
+.Addvariation{
+    background-color:rgba(253, 227, 26, 1) ;
+    padding: 5px;
+    width: 140px;
+    border-color: transparent;  
+    border-radius: 20px;
+ 
+}
+
+.clearbtn{
+    background-color:black;
+    padding: 10px;
+    color:white;
+    width: 140px;
+    border-color: transparent;  
+    border-radius: 20px; 
+}
+
+.productbtn{
+    background-color:rgba(253, 227, 26, 1) ;
+    padding: 10px;
+    width: 150px;
+    border-color: transparent;  
+    border-radius: 20px; 
+    font-weight: 800;
+}
+
+.flexcontianerform{
+    display: flex;
+    justify-content: space-between;
+}
+.flexleft{
+    justify-content: left;
+}
+
+.flexleft label{
+    color: black;
+    font-size: 15px;
+    font-weight: 800;
+    margin: 5px;
+}
+
+.flexright{
+    justify-content: right;
+}
+
+.flexright input{
+    padding: 5px;
+    border-radius: 10px;
+    background-color:rgba(231, 231, 231, 1) ;
+    border-color: transparent;
+    margin: 5px;
+    width: 200px;
+    outline-color:rgba(253, 227, 26, 1) ;
+}
+
+.flexright select{
+    padding: 5px;
+    border-radius: 10px;
+    background-color:rgba(231, 231, 231, 1) ;
+    border-color: transparent;
+    margin: 5px;
+    outline-color:rgba(253, 227, 26, 1) ;
+    width: 200px;
+}
+
+.flexconatiner{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.tablist{
+    justify-content: center;
+    text-align: center;
+    background-color:'white';
+  
+  }
+  
+  .tabconetnt{
+    margin:'10px'
+  }
+  
+  .tabbtn{
+    background-color: #FDE31A;
+  
+   border-color: transparent;
+    width:auto;
+    padding:10px;
+    font-weight:800;
+    height:50px;
+    align-items:center;
+    border-radius:10px;
+    margin:15px 5px 15px 5px;
+    } 
+
+
+  .tabbtn:active{
+    background-color: white;
+    border-color: black;
+  }
+  #tabcontainer{
+  
+  
+    background: #FFFFFF;
+    border: 0.5px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 27px;
+  }
+  .Dashboardheading h3{
+    margin-left: 23px;
+    padding-top:20px;
+    padding-bottom: 20px;
+  }

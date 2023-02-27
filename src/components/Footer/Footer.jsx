@@ -61,9 +61,10 @@ function Footer() {
                   <a className="text-white mb-2" href="ProductPhotography"><i className="fa fa-angle-right mr-2" />Product Photography</a>
                     <a className="text-white mb-2" href="/ProductReport"><i className="fa fa-angle-right mr-2" />Product Reports</a>
                     <a className="text-white mb-2" href="/Blog"><i className="fa fa-angle-right mr-2" />Blog</a>
-
+                    <a className="text-white mb-2" href="/Wallet"><i className="fa fa-angle-right mr-2" />Wallet</a>
                     <a className="text-white mb-2" href="/Helpcenter"><i className="fa fa-angle-right mr-2" />Help Center</a>
                     <a className="text-white mb-2" href="/Ticket"><i className="fa fa-angle-right mr-2" />Ticket</a>
+                    
                    
                    
 

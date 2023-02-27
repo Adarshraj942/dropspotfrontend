@@ -9,6 +9,7 @@ import 'react-js-dialog-box/dist/index.css';
 import DataTable from 'react-data-table-component';
 import { getWishlist } from '../../Api/WishlistRoute';
 import { useHistory } from 'react-router-dom';
+import './Wishlist.css'
 function Wishlist() {
 
   const smtbtn={
@@ -16,8 +17,8 @@ function Wishlist() {
     borderColor:'transparent',
    
     width:'100px',
-    borderTopRightRadius:'10px',
-    borderBottomRightRadius:'10px'
+   borderRadius:'10px',
+   padding:'5px'
   }
 
   const btns={
@@ -30,7 +31,8 @@ function Wishlist() {
     width:'120px',
     backgroundColor:'#FFE51A',
     borderColor:'transparent',
-    borderRadius:'5px'
+    borderRadius:'10px',
+    padding:'5px'
   }
   const btnmove={
     backgroundColor:'#FFE51A',
@@ -38,6 +40,20 @@ function Wishlist() {
     padding:'5px',
     width:'100px',
     borderRadius:'10px'
+  }
+
+  const inputselectotion={
+    width:'240px',color:'black',
+  backgroundColor:'rgba(231, 231, 231, 1)',
+   paddingLeft:'20px',
+   marginLeft:'20px',
+   borderColor:'transparent',
+   borderRadius:'40px',
+   height:'35px',
+   outline:'transparent'
+   
+  
+  
   }
   
   const[users,setUsers]=useState([]);
@@ -106,36 +122,43 @@ const [filterUsers,setFilteredUsers]=useState([]);
     <div>
         <Adminnavbar />
     <div className='row'>
-    <div className='col-2'><Sidebar /></div>
+    <div className='col-2' style={{backgroundColor:'#32333A'}}><Sidebar /></div>
       <div className='col-10'>
-  
+  <div className='container' style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'30px'}}>
+      <div className='container' style={{marginTop:'20px',boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px'}}>
+      <div style={{justifyContent:'left',padding:'20px'}}> <h2>WishList</h2> </div>
 
-      <Tabs defaultActiveKey="first" style={{backgroundColor:'rgba(255, 214, 0, 1)'}}>
+      <div className='row' >
 
-        <Tab  eventKey="first"  title="Wishlist">
-          <div className='row' style={{marginTop:'20px'}}>
-            <div className='col-4'>
-             <p><label htmlFor="">Catagory</label>: 
-             <span>
-              <select name="All" id="" style={{width:'250px',outline:'#FFE51A',borderColor:'#FFE51A'}}>
-                <option value="All">All</option>
-                <option value="All">Sports & Outdoor</option>
-              </select>
-              </span></p> 
-            </div>
-            <div className='col-4'>
-              <p><input style={{width:'250px',outline:'#FFE51A',borderColor:'#FFE51A',color:'black'}} placeholder='Enter SKU/Product Name' type="text" /><span><button style={smtbtn}>Serach</button></span></p>
-            </div>
-            <div className='col-2'>
-              <button style={btnmove}>Move btn</button>
-            </div>
-            <div className='col-2'>
-              <button    style={btnmovesecond}>Create folder</button>
-        
+              <div className='col-md-auto'>
+              <p><label htmlFor="">Catagory</label>: 
+              <span>
+                <select name="All" className='selectoption' >
+                  <option value="All">All</option>
+                  <option value="All">Sports & Outdoor</option>
+                </select>
+                </span></p> 
+              </div>
+              <div className='col-md-auto'>
+                <p><input style={inputselectotion}  placeholder='Enter SKU/Product Name' type="text" /><span><button style={smtbtn}  value={search}  onChange={
+                (e)=>
+                   setSearch(e.target.value)
+                
+            }>Serach</button></span></p>
+              </div>
+              <div className='col-md-auto'>
+                <button style={btnmove}>Move btn</button>
+              </div>
+              <div className='col-md-auto'>
+                <button  style={btnmovesecond}>Create folder</button>
           
+            
+              </div>
             </div>
-          </div>
-          <div className='row' style={{marginTop:'20px',backgroundColor:'#FFE51A',padding:'5px'}}>
+      </div>
+ 
+     <div className='container' style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px'}}>
+     <div className='row' style={{marginTop:'20px',backgroundColor:'#FFE51A',padding:'5px'}}>
             <div className='col'> <input type="checkbox" /></div>
             <div className='col'><button style={btns}>Date</button></div>
             <div className='col'><button  style={btns}>Images</button></div>
@@ -143,10 +166,10 @@ const [filterUsers,setFilteredUsers]=useState([]);
             <div className='col'><button  style={btns}>Product Price</button></div>
             <div className='col'><button  style={btns}>Actions</button></div>
           </div>
-        </Tab>
-        
-      </Tabs>
-      <DataTable 
+     </div>
+
+     <div className='container' style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'20px'}}>
+     <DataTable 
         
         columns={coloumn} 
       data={filterUsers} 
@@ -155,19 +178,13 @@ const [filterUsers,setFilteredUsers]=useState([]);
         style={{color:"red"}}
         highlightOnHover
         subHeader
-        subHeaderComponent={
-            <input type="text" placeholder='SEARCH... ' 
-            style={{width:"40%",height:"2rem" ,borderColor:"var(--hrColor)",color:"orangered"}}
-            value={search}
-            onChange={
-                (e)=>
-                   setSearch(e.target.value)
-                
-            }/>
-        }
+      
         subHeaderAlign="center"
         // data={data}
       />  
+     </div>
+  </div>
+    
       </div>
       
     </div>

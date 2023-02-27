@@ -8,15 +8,16 @@ function Adminnavbar() {
   const history=useHistory()
   const userId=localStorage.getItem("userId")
   return (
-    <div className='container-fluid' id="Admindashboard">
-      <div className='flex-container120'>
+    <div className='container-fluid table-bordered' id="Admindashboard"  >
+      <div className='row' style={{borderColor:"10px solid yellow;"}}>
+      <div className='flex-container120' >
         <div className='flex-item-left120' style={{margin:'10px'}}> <img onClick={()=>{
           history.push("/")
         }} style={{width:"70px"}} src={logo} alt="" /> </div>
         <div className='flex-item-right120'> 
         <img src={avatar} alt="Avatar" class="avatar" style={{width:'30px'}}></img> <span style={{margin:'10px'}}>
         <div className="dropdownuser">
-        <button className="dropbtnuser" style={{height:"30px"}}>{userId}</button>
+        <button className="dropbtnuser" >{userId}</button>
           <div className="dropdown-contentuser">
           <a href="#">Link 1</a>
           <a href="#">Link 2</a>
@@ -26,6 +27,8 @@ function Adminnavbar() {
         </span><img  src={bell} alt="" />
    </div>
       </div>
+      </div>
+      
     </div>
   )
 }

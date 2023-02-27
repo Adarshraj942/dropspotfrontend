@@ -1,11 +1,15 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import Adminnavbar from '../Adminnavbar/Adminnavbar'
 import Sidebar from '../Sidebar/Sidebar'
 import 'bootstrap/dist/css/bootstrap.css';
-import Tabs from 'react-bootstrap/Tabs';
-import Tab from 'react-bootstrap/Tab';
+import { Tab } from '@headlessui/react';
+import './ImportedOrder.css'
+
+
+
 
 function ImportedOrder() {
+  const [tabSelected, setTabSelected] = useState(null);
 
 const serachbtn={
   backgroundColor:'#FDE31A',
@@ -16,102 +20,207 @@ const serachbtn={
   fontSize:'15px',
   fontWeight:'400'
 }
+const skubnt={
+  width:'300px',
+  height:'35px',
+  borderColor:'transparent',
 
+  borderRadius: '86px',
+ 
+  backgroundColor:'rgba(231, 231, 231, 1)',
+  color: 'rgba(50, 51, 58, 1)',
+  fontSize: '15px',
+  paddingLeft: '20px',
+
+
+
+  outlineColor:'transparent', 
+}
 const box={
   width:'300px',
   borderColor:'#FDE31A',
   outline:'#FDE31A',
   borderRadius:'20px'
 }
+
+
+
+const buttonheader={
+  backgroundColor:'#FDE31A',
+  borderRadius:'15px',
+  width:'auto',
+  alignItems:'center',
+  height:'80px',
+  alignSelf:'center',
+  borderColor:'transparent',
+  
+}
+
+const tabpanls={
+  padding:'30px',
+
+}
+const handelTabCLick = (e) => {
+  setTabSelected(e);
+};
+
   return (
+
+    <>
     <div>
       <Adminnavbar />
       <div className='row'>
-        <div className='col-2'><Sidebar /></div>
+        <div className='col-2'  style={{backgroundColor:'#31343A'}}><Sidebar /></div>
         <div className='col-10'>
-        <Tabs defaultActiveKey="first"style={{backgroundColor:'rgba(255, 214, 0, 1)'}} >
-        <Tab eventKey="first" title="Orders(0)" >
-          <div className='row' style={{marginTop:'20px'}}>
+       
+        <div className='container' id="tabcontainer" style={{margin:'20px 0px 20px 10px',width:'1100px', padding:'20px',}}>
+        <div className='headingAll'><h2>Imported Order</h2></div>
+      <Tab.Group>
+      <div className='conatiner' style={buttonheader}>
+      <Tab.List className='tablist' >
+                
+                <Tab
+                 className={`tabbtn ${tabSelected === 1 ? "selected-tab" : ""}`}
+                 onClick={() => handelTabCLick(1)}  >Orders(0)</Tab>
+                <Tab  className={`tabbtn ${tabSelected === 2 ? "selected-tab" : ""}`}
+                 onClick={() => handelTabCLick(2)} >Invalid Orders(1)</Tab>
+                <Tab  className={`tabbtn ${tabSelected === 3 ? "selected-tab" : ""}`}
+                 onClick={() => handelTabCLick(3)}>Trash(2)</Tab>
+              </Tab.List>
+         </div>
+       <Tab.Panels style={tabpanls}>
+            <Tab.Panel>
+            <div className='Dashboardheading'><h3>Orders</h3></div>
+            <div className='container' style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'30px'}} >
+         <div className='row' style={{marginTop:'20px'}}>
             <div className='col'>
-              <select style={box} name="name" id="value">
+              <select style={skubnt} name="name" id="value">
                 <option value="">Your Order Time</option>
                 <option value="">Your Order Time</option>
                 <option value="">CJ Time</option>
               </select>
               </div>
-            <div className='col'><input type="date" /></div>
+            <div className='col'><input  style={skubnt} type="date" /></div>
             <div className='col'>
-              <select style={box} name="name" id="value">
+              <select  style={skubnt}  name="name" id="value">
                 <option value="">Select a Shipping method</option>
                 <option value="">#method</option>
                 <option value="">#method</option>
               </select>
             </div>
           </div>
-          <div className='row'  style={{marginTop:'20px'}}>
-            <div className='col'><input style={box} type="text" placeholder='Please enter the name' /></div>
-            <div className='col'><input style={box} type="text" placeholder='Please enter the product title' /></div>
-            <div className='col'><input style={box} type="text" placeholder='Please enter SKU' /></div>
-          </div>
-          <div className='row'  style={{marginTop:'20px'}}>
-            <div className='col'><input style={box} type="text" placeholder='Please enter order number' /></div>
-            <div className='col'><input style={box} type="text"  placeholder='Abnormal Orders' /></div>
-            <div className='col'><p><span style={{margin:'10px'}}><button style={serachbtn}>Search</button></span><button style={serachbtn}>Clear</button></p></div>
-          </div>
-          <div className='row' style={{marginTop:'20px',backgroundColor:'#FDE31A',padding:'10px'}}>
-            <div className='col'><p>Your Order No. <span>
-            <select  name="name" id="value" style={{width:'20px'}}>
-                <option value="">All</option>
-                <option value="">#method</option>
-                <option value="">#method</option>
-              </select>
-              </span></p></div>
-            <div className='col'><p>Your Order Time</p></div>
-            <div className='col'>
-            <p>Cost 
-            <span style={{margin:'1px'}}>
-              <select name="" id="" style={{width:'100px',borderRadius:'20px',outlineColor:'#FDE31A',}}>
-                  <option value="">All Warehouses</option>
-                  <option value="">All Warehouses</option>
-                  <option value="">All Warehouses</option>
-                  <option value="">All Warehouses</option>
-                </select>
-            </span> 
-              </p>
-            </div>
-           
-            <div className='col'>
-            <select name="" id="">
-                <option value="">All Countries</option>
+          <div className='row'  style={{marginTop:'20px'}} >
+                  <div className='col'><input   style={skubnt} type="text" placeholder='Please enter the name' /></div>
+                  <div className='col'><input style={skubnt}  type="text" placeholder='Please enter the product title' /></div>
+                  <div className='col'><input  style={skubnt} type="text" placeholder='Please enter SKU' /></div>
+                </div>
+                <div className='row'  style={{marginTop:'20px'}}>
+                  <div className='col'><input  style={skubnt} type="text" placeholder='Please enter order number' /></div>
+                  <div className='col'><input style={skubnt} type="text"  placeholder='Abnormal Orders' /></div>
+                  <div className='col'><p><span style={{margin:'10px'}}><button style={serachbtn}>Search</button></span><button style={serachbtn}>Clear</button></p></div>
+                </div>
+         </div>
+          <div className='container' style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'30px'}}  >
+               <div className='row' style={{marginTop:'20px',backgroundColor:'#FDE31A',padding:'15px 2px 5px 2px',color:'black',borderRadius:'20px'}}>
+                  <div className='col'> 
+                  <p ><input type="checkbox"/><span style={{marginLeft:'10px'}} >Your Order ID.</span></p>
+                 </div>
+                  <div className='col'><p >Your Order Time</p></div>
+                  <div className='col'>
+                  <p>Cost 
+                  <span style={{margin:'1px'}}>
+                   
+                  </span> 
+                    </p>
+                  </div>
                 
+                 
+                  <div className='col'>
+                  <p>Address</p>
+                  </div>
+                  <div className='col'>
+                  <p>Status</p>
+                  </div>
+                  <div className='col'>
+                  <p>Action</p>
+                  </div>
+                </div>
+               </div>
+            </Tab.Panel>
+            <Tab.Panel>
+            <div className='container' style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'30px'}} >
+            <div className='Dashboardheading'><h3>Invalid Orders</h3></div>
+         <div className='row' style={{marginTop:'20px'}}>
+            <div className='col'>
+              <select style={skubnt} name="name" id="value">
+                <option value="">Your Order Time</option>
+                <option value="">Your Order Time</option>
+                <option value="">CJ Time</option>
               </select>
-            </div>
+              </div>
+            <div className='col'><input  style={skubnt} type="date" /></div>
             <div className='col'>
-              <select name="" id="">
-              <option value="">All</option>
-                <option value="">All</option>
-                <option value="">All</option>
+              <select  style={skubnt}  name="name" id="value">
+                <option value="">Select a Shipping method</option>
+                <option value="">#method</option>
+                <option value="">#method</option>
               </select>
-   
-            </div>
-            <div className='col'>
-            <p>Remark</p>
-            </div>
-            <div className='col'>
-            <p>Action</p>
             </div>
           </div>
-        </Tab>
-        <Tab eventKey="second" title="Invalid Orders(0)">
-          Hii, I am 2nd tab content
-        </Tab>
-        <Tab eventKey="third" title="Trash(0)">
-          Hii, I am 3rd tab content
-        </Tab>
-      </Tabs>
+          <div className='row'  style={{marginTop:'20px'}} >
+                  <div className='col'><input   style={skubnt} type="text" placeholder='Please enter the name' /></div>
+                  <div className='col'><input style={skubnt}  type="text" placeholder='Please enter the product title' /></div>
+                  <div className='col'><input  style={skubnt} type="text" placeholder='Please enter SKU' /></div>
+                </div>
+                <div className='row'  style={{marginTop:'20px'}}>
+                  <div className='col'><input  style={skubnt} type="text" placeholder='Please enter order number' /></div>
+                  <div className='col'><input style={skubnt} type="text"  placeholder='Abnormal Orders' /></div>
+                  <div className='col'><p><span style={{margin:'10px'}}><button style={serachbtn}>Search</button></span><button style={serachbtn}>Clear</button></p></div>
+                </div>
+         </div>
+
+       
+             
+               <div className='container' style={{boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'30px'}}  >
+               <div className='row' style={{marginTop:'20px',backgroundColor:'#FDE31A',padding:'15px 2px 5px 2px',color:'black',borderRadius:'20px'}}>
+                  <div className='col'> 
+                  <p ><input type="checkbox"/><span style={{marginLeft:'10px'}} >Your Order ID.</span></p>
+                 </div>
+                  <div className='col'><p >Your Order Time</p></div>
+                  <div className='col'>
+                  <p>Cost 
+                  <span style={{margin:'1px'}}>
+                   
+                  </span> 
+                    </p>
+                  </div>
+                
+                 
+                  <div className='col'>
+                  <p>Address</p>
+                  </div>
+                  <div className='col'>
+                  <p>Status</p>
+                  </div>
+                  <div className='col'>
+                  <p>Action</p>
+                  </div>
+                </div>
+               </div>
+            </Tab.Panel>
+            
+            <Tab.Panel>
+            <div className='Dashboardheading'><h3>Trash</h3></div>
+              Hii, I am 3rd tab content</Tab.Panel>
+          </Tab.Panels>
+    </Tab.Group>
+      </div>
+      
         </div>
       </div>
     </div>
+  
+    </>
   )
 }
 

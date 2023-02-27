@@ -26,7 +26,7 @@ import MyCj from "./pages/MyCj";
 import Sourcingpage from './pages/Sourcingpage/Sourcingpage';
 import Purchaselisting from './pages/Purchaselisting/Purchaselisting'
 
-import myinventry from './pages/myinventry/Myinventry'
+import Myinventry from './pages/myinventry/Myinventry'
 import Wishlist from './pages/Wishlist/Wishlist'
 import MyPhotography from './pages/MyPhotography/MyPhotography'
 import ImportedOrder from './pages/ImportedOrder/ImportedOrder'
@@ -64,6 +64,7 @@ import SkuList from "./pages/SkuList/SkuList";
 import ServiceProduct from "./pages/ServiceProduct/ServiceProduct";
 import NewSignup from "./pages/NewSignup/NewSignup";
 import NewLogin from './pages/NewLogin/NewLogin'
+import Wallet from "./pages/Wallet/Wallet";
 
 
 function App() {
@@ -99,8 +100,8 @@ function App() {
     
         <Route path="/Sourcingpage" component={Sourcingpage} />
         <Route path="/Purchaselisting" component={Purchaselisting} />
-    
-        <Route path="/myinventry" component={myinventry} />
+      <Route path='/Wallet' component={Wallet}></Route>
+        <Route path="/Myinventry" component={Myinventry} />
         <Route path="/Wishlist" component={Wishlist} />
         <Route path="/MyPhotography" component={MyPhotography} />
         <Route path="/ImportedOrder" component={ImportedOrder} />

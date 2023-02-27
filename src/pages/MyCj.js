@@ -56,7 +56,7 @@ function MyCj() {
       <Adminnavbar />
       <div className='container-fluid'>
         <div className='row'>
-          <div className='col-2'>
+          <div className='col-2' style={{backgroundColor:'#32333A'}}>
             <Sidebar />
           </div>
           <div className='col-10'>

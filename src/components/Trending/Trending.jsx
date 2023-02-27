@@ -8,6 +8,8 @@ import list from "../../assets/list.png";
 import { useEffect } from "react";
 import { getAllProducts } from "../../Api/ProductRequest.js";
 import { addToWishlist, getWishlist } from "../../Api/WishlistRoute";
+
+import swal from "sweetalert";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
@@ -15,9 +17,6 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-
-import swal from "sweetalert";
-
 
 
 
@@ -37,10 +36,18 @@ const list_second = {
  
 
 };
+
+const subbtn={
+  backgroundColor:'rgba(253, 227, 26, 1)',fontWeight:'800',padding:'5px',color:'black',width:'200px',borderColor:'transparent', boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",marginLeft:'20px',borderRadius:'5px'
+}
+const subbtnlist={
+  backgroundColor:'rgba(253, 227, 26, 1)',fontWeight:'800',padding:'5px',color:'black',width:'100px',borderColor:'transparent', boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",marginLeft:'20px',borderRadius:'5px'
+}
+
 const carddesign = {
   borderRadius: "16px",
   border: "1px solid rgba(255, 255, 255, 0.3)",
- height:'380px',
+ height:'350px',
  boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)" ,
   background: "rgba(255, 255, 255, 0.2)",
   backdropFilter: "blur(10px)",
@@ -119,6 +126,7 @@ const [toggle,setToggle]=useState(false)
 const handleToggle=()=>{
   setToggle(!toggle)
 }
+
 const [open, setOpen] = React.useState(false);
 
 const handleClickOpen = () => {
@@ -129,6 +137,9 @@ const handleClose = () => {
   setOpen(false);
 };
 
+
+
+
   return (
     <>
    <div align="center"  id="trendingcontainer" className="conatiner-fluid">
@@ -138,12 +149,12 @@ const handleClose = () => {
             products.length > 0 &&
             products.map((ele) => (
               <div className="col"  >
-                <div align="center" className="card" style={carddesign}>
+                <div align="center" className="card" id="carasouelsection" style={{padding:'10px',width:'220px'}}>
                   <div className="image" style={{width:'100%'}}>
                     
                     <img
                      src={ele.image1?"https://server.dropspot.in/images/"+ele.image1:"" }
-                     style={{cursor:"pointer",width:"100%",height:"170px" }}
+                     style={{cursor:"pointer",width:"100%",height:"200px",borderRadius:'10px' }}
                      onClick={() => {
                       history.push(`/ProductPage/${ele._id}`)
                   } }
@@ -155,86 +166,7 @@ const handleClose = () => {
                         {ele.name}
                       </h4>
                     </div>
-                    <div className="row">
-                      <div className="col">
-                        <div ><button onClick={handleClickOpen} style={list_second}>Quantity : {ele.quantity}</button>
-                     
-                        <Dialog  open={open} onClose={handleClose}>
-                        
-                        <DialogContent>
-                          <DialogContentText>
-                           <div>
-                            <div className="row" >
-                              <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px'}}>Listed</button></div>
-                              <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'80px'}}>Queue</button></div>
-                              <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'100px'}}>On Listing</button></div>
-                              <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'150px'}}>Listing Failed</button></div>
-                            </div>
-                           </div>
-                          </DialogContentText>
-                          <div><h6> <button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'150px',height:'40px',marginTop:'20px'}}>Store</button> <span style={{marginLeft:'20px'}}>
-                            <select style={{backgroundColor:'#DEDEDE',fontSize:'15px',width:"300px",height:'40px',borderColor:'transparent',borderRadius:'20px'}} name="" id="">
-                            <option value="">Select</option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            </select></span></h6>
-                            </div>
-                            <div><h6> <button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'120px',height:'50px',marginTop:'40px'}}>Varient</button> <span style={{marginLeft:'20px'}}>
-                              </span></h6>
-                            </div>
-                            <div className="row" style={{marginTop:'20px'}}>
-                            <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'100px',height:'50px',marginTop:'40px'}}>Bulk Revise</button></div>
-                            <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'100px',height:'50px',marginTop:'40px'}}>Price Change</button></div>
-
-                            <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'50px',height:'50px',marginTop:'40px'}}>ok</button></div>
-                            <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:'20px',width:'150px',height:'50px',marginTop:'40px'}}>Recommended Listed Price</button></div>
-                            </div>
-                            
-                            <div className="row" style={{backgroundColor:'rgba(253, 227, 26, 1)',borderColor:'transparent',marginTop:'40px'}} >
-                              <div className="col"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}>Image</button></div>
-                              <div className="col"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}>Sku</button></div>
-                              <div className="col"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}>Style</button></div>
-                              <div className="col"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}>RRP</button></div>
-                              <div className="col"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}>Price</button></div>
-                              <div className="col"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}>ShippingFee</button></div>
-                              <div className="col"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}>Service fee</button></div>
-                              <div className="col"><button style={{backgroundColor:'transparent',borderColor:'transparent'}}>Total  Cost</button></div>
-
-                            </div>
-                            <div className="row" style={{marginTop:'20px'}}>
-                                <div><h6 >Shipping Method <span>
-                                  <select style={{backgroundColor:'#DEDEDE',fontSize:'15px',width:"300px",height:'40px',borderColor:'transparent',borderRadius:'20px',marginLeft:'20px'}} name="" id="">
-                                    <option value="">option1</option></select></span></h6></div>
-                              </div>
-                            
-                            <div>
-                              <div className="row" style={{backgroundColor:'rgba(0, 0, 0, 1)',marginTop:'20px'}}>
-                                <div className="col"><p style={{color:'white'}}>Estimated Delvery Time</p></div>
-                                <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:"20px",marginTop:'20px'}}>7 8 days</button></div>
-                                <div className="col"><p style={{color:'white'}}>Shipping Cost</p> </div>
-                                <div className="col"><button style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:"20px",marginTop:'20px',}}>14.25</button></div>
-                                <div className="col"><p style={{color:'white'}}>Tracking Information</p></div>
-                              </div>
-                            </div>
-                            <div>
-
-                              <div className="row">
-
-                                <button className="col-4" style={{backgroundColor:'#FDE31A',borderColor:'transparent',borderRadius:"20px",marginTop:'20px',width:'100px'}}>Edit before listing</button>
-                              </div>
-                             
-                            </div>
-                            
-
-                        </DialogContent>
-                        <DialogActions>
-                          <Button onClick={handleClose} style={{color:'black',padding:'5px',fontSize:'12px'}}>Cancel</Button>
-                          <Button onClick={handleClose} style={{backgroundColor:'#FDE31A',color:'black',padding:'5px',fontSize:'12px'}}>List now</Button>
-                        </DialogActions>
-                      </Dialog>
-                      </div>
-                      </div>
-                    </div>
+                   
                     
                     <div className="row">
                       <div className="col">
@@ -265,12 +197,93 @@ const handleClose = () => {
                       </div>
                     </div>
                    
-                      <div className="row">
+                      <div className="row" >
                         {" "}
-                        <div className="col"> <button  align="left" className="connect"> <img src={connection} alt="" /> Connect</button></div>
-                        <div className="col"> <button align="right" className="listbtnlist" onClick={() => {
-      history.push(`/ProductPage/${ele._id}`)
-  } }> <img src={list} alt="" /> List</button>
+                        <div className="col" style={{width:"50%"}}> <button  align="left" className="connect"> <img src={connection} alt="" /> Connect</button></div>
+                        <div className="col" style={{width:"50%"}}> <button align="right" className="listbtnlist" onClick={handleClickOpen} > <img src={list} alt="" /> List</button>
+                          <Dialog   open={open} 
+                              sx={{
+                                "& .MuiDialog-container": {
+                                  "& .MuiPaper-root": {
+                                    width: "100%",
+                                    maxWidth: "1500px",  // Set your width here
+                                  },
+                                },
+                              }}
+                             onClose={handleClose}>
+        <DialogTitle></DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+          </DialogContentText>
+            <div className="container" >
+              
+              <div className="flexcontinaer" style={{width:'300px'}}>
+                <div className="flexleft" style={{marginTop:'10px'}}>
+                <h5>Store</h5>
+                </div>
+                <div className="flexright">
+                <select className="Selectbox" name="" id="">
+                    <option value=""></option>
+                     <option value=""></option>
+                      <option value=""></option>
+                    </select>
+                </div>
+              </div>
+            </div>
+           
+            <div align="center" className="row" style={{width:'1000px',marginTop:'20px'}} >
+              <div className="col-2"><button className="bulkbtn">Bulk Revise</button></div>
+              <div className="col-4"><button className="bulkbtnprice">Price Change</button></div>
+              <div className="col-2"> <input className="inputflied" type="text" /> </div>
+              <div className="col-2"><button className="bulkbtnok">OK</button></div>
+              <div className="col-2"><button className="bulkbtnrec">Recommended Listed Price </button></div>
+            </div>
+            <div align="middle" className="row" style={{backgroundColor:'rgba(255, 214, 0, 1)',marginTop:'40px',padding:'10px',borderRadius:'20px'}}>
+              <div className="col"><input style={{width:'20px',height:'20px'}} type="checkbox" /></div>
+              <div className="col"><button className="buttonbox">Image</button></div>
+              <div className="col"><button className="buttonbox">Sku</button></div>
+              <div className="col"><button className="buttonbox"> Catogory</button></div>
+
+              <div className="col"><button className="buttonbox">MRP</button></div>
+              <div className="col-md-auto"><button className="buttonbox">Shipping Fee</button></div>
+              <div className="col-2"><button className="buttonbox">Service fee</button></div>
+              <div className="col-md-auto"><button className="buttonbox" >Total Dropshipping Cost</button></div>
+              <div className="col"><button className="buttonbox">Price</button></div>
+            </div>
+            <div align="middle" className="row" style={{backgroundColor:'rgba(217, 217, 217, 1)',marginTop:'40px',padding:'10px',borderRadius:'20px'}}>
+              <div className="col"><input style={{width:'20px',height:'20px'}} type="checkbox" /></div>
+              <div className="col"><button className="buttonbox">Image</button></div>
+              <div className="col"><button className="buttonbox">Sku</button></div>
+              <div className="col"><button className="buttonbox"> Catogory</button></div>
+
+              <div className="col"><button className="buttonbox">MRP</button></div>
+              <div className="col-md-auto"><button className="buttonbox">Shipping Fee</button></div>
+              <div className="col-2"><button className="buttonbox">Service fee</button></div>
+              <div className="col-md-auto"><button className="buttonbox" >Total Dropshipping Cost</button></div>
+              <div className="col"><button className="buttonbox">Price</button></div>
+            </div>
+              <div className="row" style={{backgroundColor:'rgba(0, 0, 0, 1)',marginTop:'40px',padding:'20px',borderRadius:'20px'}}>
+             
+              <div className="col"><button className="buttonboxsecond">Estimated Delvery Time</button></div>
+              <div className="col"><button className="buttonboxrange">Time range</button></div>
+              <div className="col"><button className="buttonboxsecond"> Shipping Cost</button></div>
+              <div className="col"><button className="buttonboxcost">₹Cost</button></div>
+              <div className="col"><button className="buttonboxTcking">Tracking Information :</button></div>
+              <div className="col"><button className="Availblity">Available</button></div>
+            </div>
+         
+        </DialogContent>
+        <DialogActions >
+          <div align="center" style={{marginRight:'33%',display:'flex',marginBottom:'10px'}}>
+          <div ><button style={{backgroundColor:'black',padding:'5px',color:'white',width:'100px',borderColor:'transparent', boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'5px' }} onClick={handleClose}>Cancel</button></div>
+          <div ><button style={subbtnlist} onClick={handleClose}>List Now</button></div>
+          <div ><button style={subbtn} onClick={handleClose}>Listing Before Edit</button></div>
+          </div>
+
+       
+         
+        </DialogActions>
+      </Dialog>
  
   </div>
   <div><span > <button className="discount" > + Queue </button> </span>{" "} </div>
@@ -293,9 +306,14 @@ const handleClose = () => {
             ))}
           </div>
     </div>
- 
+
+    <div> 
 
    </div>
+   <button  onClick={() => {
+                      history.push('Productlisting')
+                  } } className="btnview">view more >>></button> </div>
+ 
       
      
     </>

@@ -24,12 +24,6 @@ import MediaCatogryButton from '../components/MediaCatogryButton/MediaCatogryBut
 import ScrollUpButton from '../components/ScrollUpButton/ScrollUpButton';
 import ShoppingCard from '../components/ShoppingCard/ShoppingCard';
 
-
-
-
-
-
-
 const Home = () => {
   const [category, setCategory] = useState("");
   const [products, setProduct] = useState([1, 2, 3, 4, 5]);
@@ -76,7 +70,7 @@ const Home = () => {
       <br />
     
    
-    
+      <Shipping />
       <br />
       <Partner />
       <br />
