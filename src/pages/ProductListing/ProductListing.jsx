@@ -5,6 +5,7 @@ import Navbar from '../../components/Navbar'
 import Shopnavbar from '../../components/ShopNavbar/Shopnavbar'
 import Trending from '../../components/Trending/Trending'
 import downarrow from '../../assets/downarrow.png'
+import Footer from '../../components/Footer/Footer'
 import './ProductListing.css'
 
 
@@ -18,8 +19,8 @@ const [products, setProduct] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
       <Shopnavbar />
    <br />
       
-      <div className="container-fluid">
-        <div className="container" style={{margin:'20px'}}>
+      <div className="container" style={{  border: "0.5px solid rgba(0, 0, 0, 0.25)",boxShadow:'0px 4px 4px rgba(0, 0, 0, 0.15)',borderRadius:'27px'}}>
+        <div className="container" style={{margin:'20px',}}>
         <div className="row" style={{margin:'20px'}}>
                 <div className="col-2"><h4>You are in:</h4></div>
 
@@ -40,7 +41,7 @@ const [products, setProduct] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
                   </select>
 
                   </div>
-                <div className="col"><button className="buttonstylePrice">Price :<input style={{width:'50px',borderColor:'transparent',borderRadius:"20px"}} placeholder='Min' type="number" name="" id="" /> - <input style={{width:'50px',borderColor:'transparent',borderRadius:"20px",outline:'transparent'}} placeholder='Max' type="number" name="" id="" /> </button></div>
+                <div className="col"><button className="buttonstylePrice">Price : <input style={{width:'70px',borderColor:'transparent',borderRadius:"20px",outline:'transparent'}} placeholder='Min' type="number" name="" id="" /> - <input style={{width:'70px',borderColor:'transparent',borderRadius:"20px",outline:'transparent',outline:'transparent'}} placeholder='Max' type="number" name="" id="" /> </button></div>
                 <div className="col"><select className="buttonstyle"  name="" id="">
                   <option value="">Conferm</option>
                   <option value=""></option>
@@ -51,15 +52,20 @@ const [products, setProduct] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
             <div className="row" style={{margin:'20px'}}>
                 <div className="col-2"><h4>Sort by:</h4></div>
                 <div className="col"><button className="buttonstyle">Best Match</button></div>
-                <div className="col"><input placeholder='list'  className='inputboxbtn' type="number" /></div>
-                <div className="col"><input className='inputboxbtn'  style={{color:'black'}} placeholder='price' type="number" /></div>
+                <div className="col"><input placeholder='list' className='inputfieldtext'  type="number" /></div>
+                <div className="col"><input   className='inputfieldtext'   style={{color:'black'}} placeholder='price' type="number" /></div>
                 
                 
                 <div className="col"><button className="buttonstyle">Newest</button></div>
             </div>
         </div>
       </div>
+      <br />
+      <br />
       <Trending products={products} />
+      <br />
+      <br />
+      <Footer />
       
     </div>
    

@@ -19,7 +19,7 @@ const textBlock={
  const textBlock_second={
     position: 'absolute',
     bottom: '180px',
-    right: '200px',
+    right: '250px',
     backgroundColor: 'transparent',
     color:'black',
     paddingLeft: '20px',
@@ -28,41 +28,46 @@ const textBlock={
    
  }
  const buttondiv={
-  fontFamily: 'Poppins',
-  fontSize: '18px',
-  fontWeight: '400',
+  width:'300px',
+  fontSize: '15px',
+  fontWeight: '800',
   lineHeight: '27px',
   letterSpacing: '0em',
   textAlign: 'left',
     background: 'rgba(231, 231, 231, 1)',
     borderRadius: '20px',
-    borderWidth: '0',
+    outlineColor:'rgb(255, 214, 0);',
     height:'40px',
     paddingLeft: '20px',
+    border: '0.5px solid rgba(0, 0, 0, 0.25)',
+    boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.15)',
+    color:'rgba(159, 159, 159, 1)',
 
  }
  const buttoncss={
     position: 'absolute',
     top: '0',
-    borderRadius: '5px',
-    right: '0px',
+    borderBottomRightRadius:'10px',
+   borderTopRightRadius:'10px',
+    right: '5px',
     zIndex: '1',
     border: 'none',
-    top: '2px',
+    top: '1.5px',
     height: '50px',
     cursor: 'pointer',
-    color: 'white',
+    color: 'black',
     backgroundColor: '#FFD600',
     transform: 'translateX(2px)',
-    fontFamily: 'Poppins',
-    fontWeight: '400px',
-    fontSize: '18px',
+   
+    fontSize: '15px',
     lineHeight: '27px',
     width: '160px',
     borderTopLeftRadius: '15px',
      borderBottomLeftRadius: '15px',
-      fontweight: '400',
-    fontsize: '18px',
+      fontweight: '800',
+    
+    border: '0.5px solid rgba(0, 0, 0, 0.25)',
+    boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.15)',
   
  }
 
@@ -74,15 +79,17 @@ function Shipping() {
         <div   className="text-block" style={textBlock}>
           <h3 data-aos="fade-left" data-aos-duration="3000" style={{paddingBottom:'20px'}}>You sell-We source and ship for you!</h3>
           <h5 data-aos-duration="3000" style={{paddingBottom:'20px'}}>We will source for you with lower price and higher quality.</h5>
-          <div className="buttonIn">
+          <div className="buttonIn"> 
             <input id="divbutton" type="text" placeholder="please enter the tracking number" />
             <span><button className='buttoncss' style={buttoncss}>Track Pakage</button></span>
           </div>
         </div>
         <div className="input-group" style={{display:'flex'}}>
         <div className="text-block-2" style={textBlock_second}>
-          <input style={buttondiv} src="text" placeholder="Shipping Cost and Time" />
-          <span ><img src={track} style={{width:'auto',height:'auto',padding:'10px',backgroundColor:'rgba(255, 214, 0, 1)',borderRadius:'20px',borderColor:'transparent',}} /></span>
+          <button style={buttondiv} >Shipping Cost And Time</button>
+         
+          <span style={{marginLeft:'2px'}} ><img src={track} style={{width:'auto',  border: '0.5px solid rgba(0, 0, 0, 0.25)',
+    boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.15)',height:'auto',padding:'10px',backgroundColor:'rgba(255, 214, 0, 1)',borderRadius:'25px',borderColor:'transparent',}} /></span>
         </div>
       </div>
       </div>

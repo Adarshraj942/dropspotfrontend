@@ -208,10 +208,10 @@ function ProductPage() {
                     <div className="col-lg-12" style={{marginTop:'20px',paddingBottom:'20px'}} >
                     <div className="colors"  ><h4>Color</h4>
                     
-                        <div className="color" style={{backgroundColor: 'rgba(219, 30, 30, 1)',marginLeft:'20px',marginTop:'5px'}} data-hex="#e1e851" />
-                        <div className="color" style={{backgroundColor: 'rgba(255, 101, 166, 1)',marginLeft:'10px',marginTop:'5px'}} data-hex="#8cd147" />
-                        <div className="color" style={{backgroundColor: 'rgba(33, 33, 33, 1)',marginLeft:'10px',marginTop:'5px'}} data-hex="#4a9ccf" />
-                        <div className="color" style={{backgroundColor: 'rgba(16, 11, 255, 1)',marginLeft:'10px',marginTop:'5px'}} data-hex="#661f45" />
+                        <div className="color" style={{height:'25px',width:'25px',backgroundColor: 'rgba(219, 30, 30, 1)',marginLeft:'20px',marginTop:'5px'}} data-hex="#e1e851" />
+                        <div className="color" style={{height:'25px',width:'25px',backgroundColor: 'rgba(255, 101, 166, 1)',marginLeft:'10px',marginTop:'5px'}} data-hex="#8cd147" />
+                        <div className="color" style={{height:'25px',width:'25px',backgroundColor: 'rgba(33, 33, 33, 1)',marginLeft:'10px',marginTop:'5px'}} data-hex="#4a9ccf" />
+                        <div className="color" style={{height:'25px',width:'25px',backgroundColor: 'rgba(16, 11, 255, 1)',marginLeft:'10px',marginTop:'5px'}} data-hex="#661f45" />
                         
                     </div>
                     <br />
@@ -225,7 +225,12 @@ function ProductPage() {
                     <br />
                     <li style={{fontSize:'20px',lineHeight:'43.94px',fontWeight:'400',fontStyle:'Poppins',listStyle:'inherit',listStyleType:'none'}}> <h5> Service Fee</h5></li>
                     <br />
-                  <div style={{display:'flex'}}>
+                 
+                   
+                    <li style={{fontSize:'20px',lineHeight:'43.94px',fontWeight:'400',fontStyle:'Poppins',listStyle:'inherit',listStyleType:'none'}}> <h5>SKU:</h5>
+                     </li>
+                     <br />
+                     <div style={{display:'flex'}}>
                   <div><h5>Quantity</h5></div>
                    <div>
                    <div className='wrapper'>
@@ -235,10 +240,7 @@ function ProductPage() {
                     </div>
                    </div>
                   </div>
-                    <br />
-                    <li style={{fontSize:'20px',lineHeight:'43.94px',fontWeight:'400',fontStyle:'Poppins',listStyle:'inherit',listStyleType:'none'}}> <h5>SKU:</h5>
-                     </li>
-                     <button style={{backgroundColor:'#FDE31A',fontSize:'15px',fontWeight:'800',borderRadius:'30px',color:'black',width:'200px',height:'50px',borderColor:'transparent',marginTop:'30px', boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)" }}>Product Price:${post.price}</button>
+                     <button style={{backgroundColor:'#FDE31A',fontSize:'15px',fontWeight:'800',borderRadius:'30px',color:'black',width:'200px',height:'50px',borderColor:'transparent',marginTop:'30px', boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)" }}>Product Price:₹{post.price}</button>
                     </div>
                       
                     <div className="col">
@@ -265,10 +267,7 @@ function ProductPage() {
                         <div  style={{justifyContent:'right'}}>text</div>
                         </div>
                         <br />
-                        <div style={{display:'flex',justifyContent:'space-between'}}>
-                        <div style={{justifyContent:'left'}}>  <label style={label} htmlFor=""><h5>Tracking Information</h5></label></div>
-                        <div style={{justifyContent:'right'}}>text</div>
-                        </div>
+                        
                       </form>
                       </div>
 
@@ -277,43 +276,8 @@ function ProductPage() {
                     </div>
                     <br />
                  
-                  <div class="w-100 d-none d-md-block"></div></div>
-                  <div className='row' style={conatinerrow}>
-                  <div className='flexconatiner'>
-                        <div className='flexleft'>
-                          <div><img src={avatar} style={{width:'5rem'}} alt="" /></div>
-                        </div>
-                        <div className='flexrighht'>
-                          <div ><button style={btncompany}>company's name</button></div>
-                         
-                          <div align="center" style={ratings}> <h4>Ratings
-                             <span >
-                             <Box
-                            sx={{
-                             
-                              width: 200,
-                              display: 'flex',
-                              alignItems: 'center',
-                            }}
-                          >
-                            <Rating
-                              name="text-feedback"
-                              value={value}
-                              readOnly
-                              precision={0.5}
-                              emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
-                            />
-                            <Box sx={{ ml: 2 }}></Box>
-                          </Box>
-                          </span>
-                            </h4>
-                        
-                          </div>
-                          
-                          <div  > <button style={btncompany}>Contact information</button> </div>
-                        </div>
-                      </div>
-                  </div>
+                </div>
+                
        
 
                       </div>

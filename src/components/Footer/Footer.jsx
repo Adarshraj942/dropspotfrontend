@@ -12,7 +12,7 @@ function Footer() {
   return (
      
     <>
-    <div className='footercontainer'>
+    <div className='footercontainer' style={{marginTop:'300px'}}>
         <div >
 
         {/* Footer Start */}

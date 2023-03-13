@@ -2,14 +2,14 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     background-color: #f5f5f5
 }
+
 .colors {
     display: flex;
     position: fixed;
-  
- 
-  }
-  .wrapper{
-    height:30px;
+}
+
+.wrapper {
+    height: 30px;
     width: 100px;
     display: flex;
     align-items: center;
@@ -17,44 +17,43 @@ body {
     background-color: #FDE31A;
     border-radius: 12px;
     margin-left: 20px;
-
 }
 
-.recomdproduct h2{
-color:'black';
-padding-top: 40px;
-padding-bottom: 50px;
-font-weight: 500;
-text-align: center;
-
+.recomdproduct h2 {
+    color: 'black';
+    padding-top: 40px;
+    padding-bottom: 50px;
+    font-weight: 500;
+    text-align: center;
 }
 
-.wrapper span{
-    width:20px;
+.wrapper span {
+    width: 20px;
     text-align: center;
     font-size: 20px;
     font-weight: 600;
     background-color: #FDE31A;
-   
-}
-.wrapper span.num{
-   font-size: 20px;
-   
-   background-color: #FDE31A;
 }
 
-.flexleft{
+.wrapper span.num {
+    font-size: 20px;
+    background-color: #FDE31A;
+}
+
+.flexleft {
     justify-content: left;
 }
-.flexrighht{
+
+.flexrighht {
     justify-content: right;
 }
 
-.flexconatiner{
+.flexconatiner {
     display: flex;
     justify-content: space-between;
 }
-  .myBtn {
+
+.myBtn {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -68,23 +67,23 @@ text-align: center;
     cursor: pointer;
     padding: 15px;
     border-radius: 4px;
-  }
-  
-  .color {
+}
+
+.color {
     height: 15px;
     width: 15px;
     margin-left: 0.5em;
     border-radius: 18px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     border: 2px solid #aaa;
     cursor: pointer;
     margin-top: 2px;
-  }
+}
+
 .hedding {
     font-size: 20px;
     color: #ab8181;
 }
-
 
 .main-section {
     position: absolute;
@@ -117,22 +116,24 @@ text-align: center;
     color: #E45641;
 }
 
-#carasouelsection{
+#carasouelsection {
     background: #FFFFFF;
     border: 0.5px solid rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 27px;
-  }
+}
 
-option{
+option {
     background-color: #f9f9f9;
     min-width: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
-option:hover{
+
+option:hover {
     background-color: #FDE31A;
 }
+
 .right-side-pro-detail .tag-section {
     font-size: 18px;
     color: #5D4C46;

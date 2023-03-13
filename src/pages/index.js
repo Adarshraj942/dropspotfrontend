@@ -12,7 +12,7 @@ import Review from "../components/Reviews/Review";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar";
 import Partner from "../components/Partner/Partner";
-import Vender from '../components/Vender/Vender'
+
 import MediaNavbar from "../components/MediaNavbar/MediaNavbar";
 import MediaProducts from '../components/MediaProducts/MediaProducts'
 import Hotsellingproducts from '../components/Hotsellingproducts/Hotsellingproducts'
@@ -25,8 +25,8 @@ import ScrollUpButton from '../components/ScrollUpButton/ScrollUpButton';
 import ShoppingCard from '../components/ShoppingCard/ShoppingCard';
 
 const Home = () => {
-  const [category, setCategory] = useState("");
-  const [products, setProduct] = useState([1, 2, 3, 4, 5]);
+    const [category, setCategory] = useState("");
+    const [products, setProduct] = useState([1, 2, 3, 4, 5]);
 
 
 
@@ -34,63 +34,97 @@ const Home = () => {
 
 
 
-  return (
-    <div>
-    <Navbar />
-    
-      <MediaNavbar />
-      <Shopnavbar />
-    
-    
-      <Section />
-  
-      <br />
-      <MediaNavabarbutton />
-     
-      <br />
-      <Mediabutton/>
-      <br />
-     
-      <Mediabuttonbanner />
-     
-      <MediaCatogryButton />
-      <Link />
-      <br />
-     
-      <br />
+    return ( <
+        div >
+        <
+        Navbar / >
 
-      <MediaProducts/> 
-      <br />
-      <Hotsellingproducts />
-      <TrendingHeader />
-      <Trending products={products} />
-    
+        <
+        MediaNavbar / >
+        <
+        Shopnavbar / >
 
-    
-      <br />
-    
-   
-      <Shipping />
-      <br />
-      <Partner />
-      <br />
-      <ShoppingCard />
-      <br />
-      <Review />
-      <br />
-      <Vender />
-      <br />
-      <MediaFooter />
-      <Footer/>
-      <ScrollUpButton />
-     
-      
 
-   
-      
-    </div>
-    
-  );
+        <
+        Section / >
+
+        <
+        br / >
+        <
+        MediaNavabarbutton / >
+
+        <
+        br / >
+        <
+        Mediabutton / >
+        <
+        br / >
+
+        <
+        Mediabuttonbanner / >
+
+        <
+        MediaCatogryButton / >
+        <
+        Link / >
+        <
+        br / >
+
+        <
+        br / >
+
+        <
+        MediaProducts / >
+        <
+        br / >
+        <
+        Hotsellingproducts / >
+        <
+        TrendingHeader / >
+        <
+        Trending products = { products }
+        />
+
+
+
+        <
+        br / >
+
+
+        <
+        Shipping / >
+        <
+        br / >
+        <
+        Partner / >
+        <
+        br / >
+        <
+        ShoppingCard / >
+        <
+        br / >
+        <
+        Review / >
+        <
+        br / >
+
+        <
+        br / >
+        <
+        MediaFooter / >
+        <
+        Footer / >
+        <
+        ScrollUpButton / >
+
+
+
+
+
+        <
+        /div>
+
+    );
 };
 
 export default Home;

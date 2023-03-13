@@ -1,20 +1,15 @@
-
-
 .container {
     width: 900px
 }
 
 .card {
-   
     border-radius: 16px;
-	border: 1px solid rgba(255, 255, 255, 0.3);
-    
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	background: rgba(255, 255, 255, 0.2);
-
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.2);
 }
 
-.buttonstyle{
+.buttonstyle {
     background-color: #FFCA28;
     border-color: transparent;
     border-radius: 10px;
@@ -27,15 +22,25 @@
 
 .image-container {
     position: relative;
-   
 }
 
 .thumbnail-image {
     border-radius: 10px !important
 }
 
+.inputfieldtext {
+    border-color: transparent;
+    border-radius: 10px;
+    padding: 5px;
+    width: 150px;
+    font-weight: 800;
+    font-size: 15px;
+    outline: transparent;
+    background-color: #DEDEDE;
+    color: black;
+}
 
-.inputboxbtn{
+.inputboxbtn {
     background-color: #FFCA28;
     border-color: transparent;
     border-radius: 10px;
@@ -43,26 +48,26 @@
     width: 150px;
     font-weight: 800;
     font-size: 15px;
-    outline: transparent;  
+    outline: transparent;
 }
 
-.list{
-    color:black;
+.list {
+    color: black;
     font-weight: 800;
     font-size: 15px;
     text-align: left;
     padding-left: 20px;
 }
 
-.Price{
-    color:black;
+.Price {
+    color: black;
     font-weight: 800;
     font-size: 15px;
     text-align: left;
     padding-left: 20px;
 }
 
-.buttonstylePrice{
+.buttonstylePrice {
     background-color: #FFCA28;
     border-color: transparent;
     border-radius: 10px;
@@ -70,19 +75,18 @@
     width: 250px;
     font-weight: 800;
     font-size: 15px;
-    outline: transparent; 
+    outline: transparent;
+    text-align: left;
 }
-
-
 
 .dress-name {
     font-size: 15.82px;
     font-weight: 400;
     width: 100%;
-	align-items: center;
-	padding-top: 10px;
-	font-family: 'Poppins';
-	line-height:22.23px;
+    align-items: center;
+    padding-top: 10px;
+    font-family: 'Poppins';
+    line-height: 22.23px;
 }
 
 .new-price {

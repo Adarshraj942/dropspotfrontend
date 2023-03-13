@@ -35,6 +35,19 @@ function UserProfile() {
     setOpen(false);
   };
 
+  const handleClickOpenButton = () => {
+    setOpen(true);
+  };
+
+  const handleCloseButton = () => {
+    setOpen(false);
+  };
+
+  const subbtn={
+    backgroundColor:'rgba(253, 227, 26, 1)',padding:'5px',color:'black',width:'100px',borderColor:'transparent', boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",marginLeft:'20px',borderRadius:'5px'
+  }
+
+
   return (
     <div>
      <Navbar />
@@ -46,8 +59,8 @@ function UserProfile() {
     <div className='container' style={buttonheader}>
     <Tab.List>
         <Tab className='tabbtn'>Resigtration Info</Tab>
-        <Tab className='tabbtn'>Tab 2</Tab>
-        <Tab className='tabbtn'>Tab 3</Tab>
+        <Tab className='tabbtn'>Address Management</Tab>
+        <Tab className='tabbtn'>Account Security</Tab>
       </Tab.List>
     </div>
      
@@ -180,14 +193,15 @@ function UserProfile() {
           
         </Tab.Panel>
         <Tab.Panel>   
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Add New Address
+      <Button style={{backgroundColor:'rgba(253, 227, 26, 1)',padding:'10px',color:'black',width:'200px',borderColor:'transparent', boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",marginLeft:'20px',borderRadius:'5px'}} variant="outlined" onClick={handleClickOpen}>
+        Add New Address +
       </Button>
-      <Dialog  open={open} onClose={handleClose}>
-        <DialogTitle>Add Address</DialogTitle>
+      <Dialog  style={{width:'100%'}}  open={open} onClose={handleClose}>
+        <DialogTitle align="center" style={{fontSize:'15px',fontWeight:'500'}}> <div style={{padding:'10px',fontWeight:'800px',fontSize:'15px'}}>  <h4>Add Address</h4> </div> </DialogTitle>
         <DialogContent>
           <DialogContentText>
-       <div className='flexcontainerform' >
+     <form action="">
+     <div className='flexcontainerform' >
         <div className='flexleft'><h5>First name</h5></div>
         <div className='flexright'><input type="text" required /></div> 
        </div>
@@ -219,15 +233,73 @@ function UserProfile() {
         <div className='flexleft'><h5>Phone</h5></div>
         <div className='flexright'><input type="text" /></div> 
        </div>
+     </form>
+          </DialogContentText>
+          
+        </DialogContent>
+        <DialogActions >
+            <div align="center" style={{marginRight:'25%',display:'flex',marginBottom:'10px'}}>
+            <div ><button style={{backgroundColor:'black',padding:'5px',color:'yellow',width:'100px',borderColor:'transparent', boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",borderRadius:'5px' }} onClick={handleClose}>Cancel</button></div>
+            <div ><button style={subbtn} onClick={handleClose}>Submit</button></div>
+            </div>
+        </DialogActions>
+      </Dialog> 
+    </Tab.Panel>
+        <Tab.Panel>
+         
+          <div className='container'  id="carasouelsection" style={{padding:'40px',marginTop:'40px'}} >
+          <div className='flexconatinerpanel'>
+            <div className='flexleft'>
+             <h4>Reset Password</h4>
+            </div>
+            <div className='flexright'>
+       <Button style={{backgroundColor:'rgba(253, 227, 26, 1)',padding:'10px',color:'black',width:'200px',borderColor:'transparent', boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",marginLeft:'20px',borderRadius:'5px'}} variant="outlined" variant="outlined" onClick={handleClickOpenButton }>
+        Edit
+      </Button>
+      <Dialog open={open} onClose={handleCloseButton}>
+        <DialogTitle>Subscribe</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            2nd cont
           </DialogContentText>
           
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleClose}>Subscribe</Button>
+          <Button onClick={handleCloseButton}>Cancel</Button>
+          <Button onClick={handleCloseButton}>Subscribe</Button>
         </DialogActions>
-      </Dialog> </Tab.Panel>
-        <Tab.Panel>Content 3</Tab.Panel>
+      </Dialog>
+            </div>
+          </div>
+          </div>
+          
+        <div className='container' id="carasouelsection" style={{padding:'40px',marginTop:'40px'}}  >
+            
+        <div className='flexconatinerpanel'>
+            <div className='flexleft'>
+              <h4>Delete Account</h4>
+            </div>
+            <div className='flexright'>
+        <Button  style={{backgroundColor:'rgba(253, 227, 26, 1)',padding:'10px',color:'black',width:'200px',borderColor:'transparent', boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.15)",marginLeft:'20px',borderRadius:'5px'}} variant="outlined" variant="outlined" onClick={handleClickOpenButton}>
+        Delete <account>                                        </account>
+      </Button>
+      <Dialog open={open} onClose={handleCloseButton}>
+        <DialogTitle>Subscribe</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+           3rd cont
+          </DialogContentText>
+          
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseButton}>Cancel</Button>
+          <Button onClick={handleCloseButton}>Subscribe</Button>
+        </DialogActions>
+      </Dialog>
+            </div>
+          </div>
+        </div>
+        </Tab.Panel>
       </Tab.Panels>
     </Tab.Group>
    </div>

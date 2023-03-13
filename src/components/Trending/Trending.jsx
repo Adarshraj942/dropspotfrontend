@@ -310,9 +310,10 @@ const handleClose = () => {
     <div> 
 
    </div>
+   <div align='center'>
    <button  onClick={() => {
                       history.push('Productlisting')
-                  } } className="btnview">view more >>></button> </div>
+                  } } className="btnview">view more >>></button> </div> </div>
  
       
      
